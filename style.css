@@ -1,0 +1,57 @@
+#logo img {
+  width: 200px;
+  padding-top: 20px;
+}
+header {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: auto 3rem;
+  padding-bottom: 5rem;
+}
+h1 {
+  position: absolute;
+  right: 5rem;
+  top: 0.5rem;
+  color: #901c1c;
+  font-weight: 400;
+  font-size: 36px;
+}
+nav {
+  width: 75%;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-weight: 500;
+  font-size: 12px;
+  padding-top: 2rem;
+  width: 30rem;
+  color: #901c1c;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+article {
+  width: 30%;
+}
+h2 {
+  padding: 0 5rem;
+  text-align: center;
+}
+p {
+  padding: 0rem 5rem 0 5rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+main img {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 12rem;
+  margin: 0 7rem;
+}
