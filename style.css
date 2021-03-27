@@ -3,23 +3,21 @@
   padding-top: 20px;
 }
 header {
-  width: auto;
+  width: 60%;
   display: flex;
   justify-content: space-between;
-  margin: auto 3rem;
+  margin-left: 7rem;
   padding-bottom: 5rem;
 }
 h1 {
   position: absolute;
-  right: 5rem;
+  right: 7rem;
   top: 0.5rem;
   color: #901c1c;
   font-weight: 400;
   font-size: 36px;
 }
-nav {
-  width: 75%;
-}
+
 nav ul {
   list-style-type: none;
   display: flex;
@@ -28,6 +26,7 @@ nav ul {
   font-weight: 500;
   font-size: 12px;
   padding-top: 2rem;
+  padding-right: 2rem;
   width: 30rem;
   color: #901c1c;
 }
@@ -37,16 +36,36 @@ main {
   justify-content: space-between;
 }
 article {
-  width: 30%;
+  width: 32%;
+  margin-bottom: 4%;
 }
-h2 {
-  padding: 0 5rem;
+.identite {
+  color: #d3573c;
+  font-size: 36px;
+  font-weight: 400;
+  padding: 0 3rem;
+  margin: 0%;
   text-align: center;
 }
 p {
-  padding: 0rem 5rem 0 5rem;
   font-size: 0.8rem;
   text-align: center;
+  margin: 0.8%;
+}
+.lieu {
+  color: #901c1c;
+  font-size: 13px;
+  font-weight: 400;
+}
+.tagline {
+  color: black;
+  font-size: 10px;
+  font-weight: 400;
+}
+.prix {
+  color: #757575;
+  font-size: 9px;
+  font-weight: 400;
 }
 main img {
   width: 12rem;
@@ -54,4 +73,18 @@ main img {
   object-fit: cover;
   border-radius: 12rem;
   margin: 0 7rem;
+}
+.tags-photographers {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.tags-photographers li {
+  padding: 0 0.2rem;
+  margin: 0 0.1rem;
+  color: #901c1c;
+  font-size: 12px;
+
+  border: 0.5px solid #c4c4c4;
+  border-radius: 11px;
 }
