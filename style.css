@@ -89,3 +89,15 @@ main img {
   display: flex;
   justify-content: center;
 }
+
+/*scroll*/
+.scroll {
+  position: fixed;
+  display: none;
+  background-color: #db8876;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.2rem;
+  top: 2%;
+  left: 45%;
+  text-decoration: none;
+}
