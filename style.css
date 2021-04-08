@@ -3,19 +3,17 @@
   padding-top: 20px;
 }
 header {
-  width: 60%;
   display: flex;
   justify-content: space-between;
   margin-left: 7rem;
+  margin-right: 0;
   padding-bottom: 5rem;
 }
 h1 {
-  position: absolute;
-  right: 7rem;
-  top: 0.5rem;
   color: #901c1c;
   font-weight: 400;
   font-size: 36px;
+  margin-right: 0;
 }
 
 nav ul {
@@ -25,10 +23,14 @@ nav ul {
   flex-direction: row;
   font-weight: 500;
   font-size: 12px;
-  padding-top: 2rem;
-  padding-right: 2rem;
+  padding: 2rem 0 0 0;
+
   width: 30rem;
   color: #901c1c;
+}
+li {
+  padding: 0;
+  margin: 0;
 }
 main {
   display: flex;
@@ -56,6 +58,7 @@ p {
   color: #901c1c;
   font-size: 13px;
   font-weight: 400;
+  margin: 0 auto;
 }
 .tagline {
   color: black;
@@ -74,17 +77,15 @@ main img {
   border-radius: 12rem;
   margin: 0 7rem;
 }
-.tags-photographers {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-}
-.tags-photographers li {
+.tags span {
   padding: 0 0.2rem;
   margin: 0 0.1rem;
   color: #901c1c;
   font-size: 12px;
-
   border: 0.5px solid #c4c4c4;
   border-radius: 11px;
+}
+.tags {
+  display: flex;
+  justify-content: center;
 }
