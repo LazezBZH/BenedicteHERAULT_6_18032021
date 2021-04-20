@@ -16,8 +16,7 @@ h1 {
   margin-right: 0;
 }
 
-nav ul {
-  list-style-type: none;
+nav {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -25,12 +24,16 @@ nav ul {
   font-size: 12px;
   padding: 2rem 0 0 0;
 
-  width: 30rem;
-  color: #901c1c;
+  width: auto;
 }
-li {
-  padding: 0;
-  margin: 0;
+nav span {
+  height: 1rem;
+  padding: 0 0.2rem;
+  margin: 0 0.5rem;
+  color: #901c1c;
+  font-size: 12px;
+  border: 0.5px solid #c4c4c4;
+  border-radius: 11px;
 }
 main {
   display: flex;
@@ -75,9 +78,11 @@ main img {
   height: 12rem;
   object-fit: cover;
   border-radius: 12rem;
-  margin: 0 7rem;
 }
-.tags span {
+.photoIdentite {
+  text-align: center;
+}
+.tag-photographe {
   padding: 0 0.2rem;
   margin: 0 0.1rem;
   color: #901c1c;
@@ -100,4 +105,61 @@ main img {
   top: 2%;
   left: 45%;
   text-decoration: none;
+}
+
+/*responsive*/
+@media screen and (max-width: 800px) {
+  #logo img {
+    width: 150px;
+    padding-top: 20px;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0.2rem;
+    margin-right: 0;
+    padding-bottom: 2rem;
+  }
+  h1 {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto 0.8rem;
+  }
+  nav span {
+    margin: 0.2rem 0.5rem;
+  }
+
+  header :nth-child(2) {
+    order: 1;
+  }
+
+  main {
+    display: block;
+  }
+
+  article {
+    width: 20rem;
+    margin: 2rem auto;
+  }
+  .photoIdentite {
+    width: 12rem;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+  }
+  h2 {
+    width: auto;
+    text-align: center;
+  }
+  .scroll {
+    left: 35%;
+  }
 }

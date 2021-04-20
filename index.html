@@ -27,75 +27,19 @@
           <img src="medias/logo.png" alt="Logo de FishEye" />
         </a>
       </div>
-      <div>
-        <nav>
-          <ul class="tags">
-            <li
-              class="tags"
-              id="portrait"
-              aria-label="sélectionner les photos ayant pour tag 'portrait' "
-            >
-              #<span class="filtre">Portrait</span>
-            </li>
-            <li
-              class="tags"
-              id="art"
-              aria-label="sélectionner les photos ayant pour tag 'art' "
-            >
-              #<span class="filtre">Art</span>
-            </li>
-            <li
-              class="tousTags"
-              id="fashion"
-              aria-label="sélectionner les photos ayant pour tag 'fashion' "
-            >
-              #<span class="filtre">Fashion</span>
-            </li>
-            <li
-              class="tags"
-              id="architecture"
-              aria-label="sélectionner les photos ayant pour tag 'architecture' "
-            >
-              #<span class="filtre">Architecture</span>
-            </li>
-            <li
-              class="tags"
-              id="travel"
-              aria-label="sélectionner les photos ayant pour tag 'travel' "
-            >
-              #<span class="filtre">Travel</span>
-            </li>
-            <li
-              class="tags"
-              id="sport"
-              aria-label="sélectionner les photos ayant pour tag 'sport' "
-            >
-              #<span class="filtre">Sport</span>
-            </li>
-            <li
-              class="tag"
-              id="animals"
-              aria-label="sélectionner les photos ayant pour tag 'animals' "
-            >
-              #<span class="filtre">Animals</span>
-            </li>
-            <li
-              class="tags"
-              id="events"
-              aria-label="sélectionner les photos ayant pour tag 'events' "
-            >
-              #<span class="filtre">Events</span>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav id="tags"></nav>
+      <!--emplacement pour tags filtrants-->
       <div><h1>Nos photographes</h1></div>
     </header>
 
-    <a href="#" class="scroll">Passer au contenu</a>
+    <a href="#" class="scroll">Passer au contenu</a
+    ><!--scroll (surtout utile en format mobile)-->
 
     <main class="accueil" id="main"></main>
+    <!--contiendra tous les "articles"=photographes créés en js-->
 
-    <script src="script.js"></script>
+    <script type="text/javascript" src="js/Photographer.js"></script>
+    <script type="text/javascript" src="js/List.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
