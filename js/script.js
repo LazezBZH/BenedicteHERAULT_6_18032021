@@ -1,5 +1,3 @@
-const main = document.querySelector("main");
-
 fetch("js/donnees.json")
   .then(function (response) {
     if (!response.ok) {
@@ -9,7 +7,7 @@ fetch("js/donnees.json")
   })
   .then(function (json) {
     let list = new List();
-    for (var i = 0; i < json.photographers.length; i++) {
+    for (let i = 0; i < json.photographers.length; i++) {
       let photographe = new Photographer(json.photographers[i]);
       list.add(photographe);
     }

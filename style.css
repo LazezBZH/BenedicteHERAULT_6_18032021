@@ -94,7 +94,10 @@ main img {
   display: flex;
   justify-content: center;
 }
-
+.tag-actif {
+  background-color: #db8876;
+  color: white;
+}
 /*scroll*/
 .scroll {
   position: fixed;
