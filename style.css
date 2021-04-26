@@ -40,9 +40,13 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-article {
+a {
   width: 32%;
   margin-bottom: 4%;
+  text-decoration: none;
+}
+.photoIdentite {
+  text-align: center;
 }
 .identite {
   color: #d3573c;
@@ -79,9 +83,7 @@ main img {
   object-fit: cover;
   border-radius: 12rem;
 }
-.photoIdentite {
-  text-align: center;
-}
+
 .tag-photographe {
   padding: 0 0.2rem;
   margin: 0 0.1rem;
@@ -148,7 +150,7 @@ main img {
     display: block;
   }
 
-  article {
+  a {
     width: 20rem;
     margin: 2rem auto;
   }

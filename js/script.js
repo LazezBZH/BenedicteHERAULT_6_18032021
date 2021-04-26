@@ -12,9 +12,10 @@ fetch("js/donnees.json")
       list.add(photographe);
     }
 
-    list.displayPhotographers();
     list.displayTags();
+
     list.listenForFiltering();
+    list.displayPhotographers(list.all);
   });
 
 //apparition du scroll "passer au contenu"

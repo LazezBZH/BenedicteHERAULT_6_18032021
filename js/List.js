@@ -8,11 +8,11 @@ class List {
   }
 
   //html tous les photographes page accueil...provient de Photographer
-  displayPhotographers() {
+  displayPhotographers(photographes) {
     let html = "";
 
-    for (let i = 0; i < this.all.length; i++) {
-      let photographe = new Photographer(this.all[i]);
+    for (let i = 0; i < photographes.length; i++) {
+      let photographe = new Photographer(photographes[i]);
       html += photographe.render();
     }
     document.querySelector("main").innerHTML = html;
@@ -38,7 +38,7 @@ class List {
 
     return list;
   }
-  //filtre à faire, ne fonctionne pas encore
+  //filtre sur les tags
   listenForFiltering() {
     let filters = document.querySelectorAll(".tag-filter");
     for (let i = 0; i < filters.length; i++) {
@@ -73,10 +73,10 @@ class List {
     });
 
     this.hideAll();
+    this.displayPhotographers(this.filtered);
   }
 
   hideAll() {
     document.querySelector("main").innerHTML = "";
-    this.displayPhotographers(this.filtered);
   }
 }
