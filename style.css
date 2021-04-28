@@ -1,3 +1,8 @@
+.container {
+  max-width: 1500px;
+  margin: auto;
+}
+
 #logo img {
   width: 200px;
   padding-top: 20px;
@@ -114,15 +119,15 @@ main img {
 
 /*fiches par photographe*/
 #medias img {
-  width: 20rem;
-  height: 20rem;
+  width: 18rem;
+  height: 18rem;
   border-radius: 0%;
   padding: 1rem 3rem;
   object-fit: cover;
 }
 video {
-  width: 20rem;
-  height: 20rem;
+  width: 18rem;
+  height: 18rem;
   padding: 1rem 3rem;
 }
 #medias {
