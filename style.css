@@ -40,7 +40,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-a {
+main a {
   width: 32%;
   margin-bottom: 4%;
   text-decoration: none;
@@ -112,7 +112,27 @@ main img {
   text-decoration: none;
 }
 
-/*responsive*/
+/*fiches par photographe*/
+#medias img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 0%;
+  padding: 1rem 3rem;
+  object-fit: cover;
+}
+video {
+  width: 20rem;
+  height: 20rem;
+  padding: 1rem 3rem;
+}
+#medias {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/*RESPONSIVE*/
 @media screen and (max-width: 800px) {
   #logo img {
     width: 150px;
@@ -150,7 +170,7 @@ main img {
     display: block;
   }
 
-  a {
+  main a {
     width: 20rem;
     margin: 2rem auto;
   }
