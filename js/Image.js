@@ -7,8 +7,6 @@ class Image {
     this.date = data.date;
     this.price = data.price;
     this.src = data.src;
-  }
-  render() {
-    return `<img src="${this.image}"/>`;
+    this.title = data.title;
   }
 }

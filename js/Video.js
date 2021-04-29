@@ -7,10 +7,6 @@ class Video {
     this.date = data.date;
     this.price = data.price;
     this.src = data.src;
-  }
-  render() {
-    return `<video  controls>
-  <source src="${this.src}" type="video/mp4">
-</video>`;
+    this.title = data.title;
   }
 }
