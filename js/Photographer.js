@@ -18,7 +18,7 @@ class Photographer {
 
     return `
        <a href="pagePhotographe.html?id=${this.id}">
-        <div class="photoIdentite"><img src="medias/PhotographersIDPhotos/${this.portrait}"></div>
+        <div class="photoIdentite"><img src="medias/photographersIDPhotosb/${this.portrait}"></div>
         <h2 class="identite">${this.name}</h2>
         <p class="lieu">${this.city}, ${this.country}</p>
         <p class="tagline">${this.tagline} </p>

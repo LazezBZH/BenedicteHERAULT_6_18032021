@@ -10,7 +10,7 @@ class Media {
     this.title = data.title;
     if (data.hasOwnProperty("image")) {
       this.type = "image";
-      this.src = "medias/" + data.photographerId + "/" + data.image;
+      this.src = "medias/" + data.photographerId + "b/" + data.image;
       this.html = `<figure>
     <img src="${this.src}"
          alt="${this.title}">
