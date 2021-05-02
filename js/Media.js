@@ -6,7 +6,7 @@ class Media {
     this.tags = data.tags;
     this.likes = data.likes;
     this.date = data.date;
-    this.price = data.price;
+
     this.title = data.title;
     if (data.hasOwnProperty("image")) {
       this.type = "image";
@@ -15,7 +15,7 @@ class Media {
     <img src="${this.src}"
          alt="${this.title}">
     <figcaption> <div class="mediaTitle">${this.title}</div>
-    <div class="mediaLikes">${this.price} €
+    <div class="mediaLikes">
    ${this.likes} <i class="fas fa-heart"></i></div></figcaption>
 </figure>`;
     } else {
@@ -26,7 +26,7 @@ class Media {
   <source src="${this.src}" type="video/mp4">
 </video>
     <figcaption>${this.title}
-    <div class="mediaLikes">${this.price} €
+    <div class="mediaLikes">
    ${this.likes} <i class="fas fa-heart"></i></div></figcaption>
 </figure>`;
     }
