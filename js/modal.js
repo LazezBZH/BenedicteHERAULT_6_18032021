@@ -3,7 +3,7 @@ let modalBg = document.querySelector(".bground");
 let formData = document.querySelectorAll(".form-data");
 let validationBtn = document.getElementById("btn-envoi");
 let closeBtn = document.querySelector("#close");
-let launchBtn = document.querySelector(".contactButton");
+let launchBtn = document.querySelector("#contactButton");
 
 // VARIABLES FORMULAIRE
 let prenom = document.getElementById("first");
