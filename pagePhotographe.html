@@ -20,24 +20,126 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body><div class="container">
-    <header id="headerFiche" role="banner">
-      <div>
-        <a
+  <body>
+    <div class="container">
+      <header id="headerFiche" role="banner">
+        <div>
+          <a
           href="index.html"
           id="logo"
           aria-label="lien vers page d'accueil de FishEye "
         >
           <img src="medias/logo.png" alt="Logo de FishEye" />
-        </a>
-      </div>
-    </header>
+          </a>
+        </div>
+      </header>
+    
 
-    <main class="fiche">
+
+   
+          <div class="bground">
+            <div class="form-header">
+              <h2 id="form-title"></h2>
+            <span class="close" id="close"></span>
+            </div>
+           
+            <div class="modal-body">
+           
+
+              <form
+                id="form"
+                name="contact"
+                action="index.html"
+                method="get"
+                onsubmit="return validate();"
+              >
+                <div class="form-data">
+                  
+                  <label for="first">Prénom</label
+                  ><br />
+                  <input
+                    class="text-control"
+                    type="text"
+                    id="first"
+                    name="first"
+                    required="required"
+                    minlength="2"
+                  /><br />
+                  <span class="erreur" id="erreur-prenom"></span>
+                 
+                </div>
+
+                <div class="form-data">
+                  <label for="last">Nom</label
+                  ><br />
+                  <input
+                    class="text-control"
+                    type="text"
+                    id="last"
+                    name="last"
+                    required="required"
+                    minlength="2"
+                  /><br />
+                  <span class="erreur" id="erreur-nom"></span>
+                  
+                </div>
+                <div class="form-data">
+                  <label for="email">E-mail</label
+                  ><br />
+                  <input
+                    class="text-control"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required="required"
+                  /><br />
+                  <span class="erreur" id="erreur-mail"></span>
+                
+                </div>
+                
+             <div class="form-data">
+                  <label for="message">Votre message</label
+                  ><br />
+                  <input
+                    class="text-control"
+                    type="text"
+                    id="message"
+                    name="message"
+                    required="required"
+                    minlength="5"
+                  /><br />
+                  <span class="erreur" id="erreur-message"></span>
+                  
+                
+                
+                <input
+                  class="button btn-submit"
+                  id="btn-envoi"
+                  type="submit"
+                  value="Envoyer"
+                  
+                />
+              </form></div></div></div>
+
+
+    <main >
+      
+          
+
+
+
+
+    <div class="fiche">
       <div id="mainFiche"></div>
       <div  id="medias"></div>
-<div class="scrollProfile">test</div>
-      <script type="text/javascript" src="js/scrollProfil.js"></script>
+      <div class="scrollProfile">test</div>
+
+
+
+      
+   
+    </main> 
+  <script type="text/javascript" src="js/scrollProfil.js"></script>
       <script type="text/javascript" src="js/Image.js"></script>
       <script type="text/javascript" src="js/Video.js"></script>
       <script type="text/javascript" src="js/Photographer.js"></script>
@@ -45,7 +147,7 @@
       <script type="text/javascript" src="js/Media.js"></script>
       <script type="text/javascript" src="js/MediaFactory.js"></script>
       <script type="text/javascript" src="js/pagePhotographe2.js"></script>
-      </div>
-    </main>
+      <script type="text/javascript" src="js/modal.js"></script>
+  </div>
   </body>
 </html>

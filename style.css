@@ -125,7 +125,7 @@ main img {
   text-decoration: none;
 }
 
-/*fiches par photographe*/
+/*fiches par photographe* profil*/
 
 .profil {
   display: flex;
@@ -137,10 +137,10 @@ main img {
 }
 .contactButton {
   height: 1rem;
-
+  border: none;
   margin-top: 1.8rem;
   padding: 1rem;
-  line-height: 1rem;
+  line-height: 0.2rem;
   color: white;
   background-color: #901c1c;
   border-radius: 0.2rem;
@@ -166,6 +166,8 @@ main img {
 #headerFiche {
   margin-left: 5rem;
 }
+
+/*fiches par photographe* medias*/
 #medias figure {
   width: 20rem;
   height: 20rem;
@@ -216,6 +218,131 @@ video {
   right: 2%;
   background-color: #db8876;
   border-radius: 0.2rem;
+}
+
+/*modale*/
+.btn-submit {
+  background: #901c1c;
+  margin-top: 2rem;
+  padding: 1em;
+  color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-submit:disabled {
+  background: grey;
+  cursor: not-allowed;
+}
+
+.bground {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 20%;
+  top: 10%;
+
+  width: 60%;
+  overflow: auto;
+  background-color: #d3573c;
+}
+
+.content {
+  margin: 5% auto;
+  width: 100%;
+  max-width: 500px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  background: #232323;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding-top: 10px;
+}
+.contactez,
+.photographe-name {
+  font-size: 3.5rem;
+  margin-left: 4rem;
+}
+.modal-body {
+  padding: 15px 8%;
+  margin: 15px auto;
+}
+
+label {
+  font-family: var(--font-default);
+  font-size: 2rem;
+  font-weight: normal;
+  display: inline-block;
+  margin-bottom: 11px;
+}
+input {
+  padding: 8px;
+  border: 0.8px solid #ccc;
+  outline: none;
+}
+.text-control {
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 2rem;
+  height: 48px;
+}
+.erreur {
+  color: red;
+  font-size: 1rem;
+  background-color: honeydew;
+}
+.erreur-input {
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 20px;
+  height: 48px;
+  border: 0.8px solid red;
+}
+#message {
+  min-height: 10rem;
+}
+.close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(0.7);
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #fff;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+.btn-submit {
+  background: #901c1c;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 7px;
+  font-size: 1rem;
+  padding: 12px 82px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
 }
 
 /*RESPONSIVE*/
@@ -272,5 +399,35 @@ video {
   }
   .scroll {
     left: 35%;
+  }
+
+  .profil {
+    margin: 2rem 0 3rem 0;
+    padding: 0.2rem;
+  }
+  .contactButton {
+    font-size: 1.2rem;
+    line-height: 0.1rem;
+    position: fixed;
+    left: 25%;
+    bottom: 1rem;
+  }
+  .photoProfil {
+    margin: 1rem 0 0 -2.2rem;
+  }
+  .photoProfil img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .nameProfil {
+    text-align: left;
+    font-size: 2rem;
+    color: #d3573c;
+    margin: 1rem 0;
+  }
+
+  .scrollProfile {
+    display: none;
   }
 }

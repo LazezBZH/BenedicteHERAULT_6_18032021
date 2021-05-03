@@ -22,22 +22,25 @@ fetch("js/donnees.json")
       medias.forEach((item) => {
         list.add(new Media(item));
       });
-      list.all.forEach((a) => console.log(a.type, a.src));
 
       list.display(list.all);
-      console.log(photographer);
+
       document.getElementById("mainFiche").innerHTML = `<section class="profil">
       <div class="textProfil">
     <h2 class="nameProfil">${photographer.name}</h2>
     <p class="locationProfil">${photographer.city}, ${photographer.country}</p>
     <p class="taglineProfil">${photographer.tagline} </p>
     <div class="tagsProfil">${tagHtml}</div></div>
-    <button class="contactButton"
+    <button class="contactButton" id="contactButton"
        >
    Contactez-moi
 </button>
      <div class="photoProfil"><img src="medias/photographersIDPhotosb/${photographer.portrait}"></div>
     </section>`;
+
+      document.getElementById(
+        "form-title"
+      ).innerHTML = `<div class="contactez">Contactez-moi</div> <div class="photographe-name">${photographer.name}</div>`;
     }
 
     function getMedias(medias) {
