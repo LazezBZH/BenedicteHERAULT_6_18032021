@@ -36,10 +36,12 @@ validationBtn.addEventListener("click", sendForm);
 
 function launchModal() {
   modalBg.style.display = "block";
+  launchBtn.style.display = "none";
 }
 
 function fermerFormulaire() {
   modalBg.style.display = "none";
+  launchBtn.style.display = "block";
 }
 
 function validerPrenom(e) {
@@ -118,4 +120,5 @@ function validerMessage(e) {
 
 function sendForm(e) {
   modalBg.style.display = "none";
+  launchBtn.style.display = "block";
 }

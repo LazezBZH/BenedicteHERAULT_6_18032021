@@ -123,6 +123,8 @@ main img {
   top: 2%;
   left: 45%;
   text-decoration: none;
+  color: black;
+  font-weight: 600;
 }
 
 /*fiches par photographe* profil*/
@@ -144,7 +146,7 @@ main img {
   border: none;
   margin-top: 1.8rem;
   margin-right: 1rem;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   line-height: 0.2rem;
   font-size: 1.2rem;
   font-weight: 600;
@@ -152,24 +154,23 @@ main img {
   background-color: #901c1c;
   border-radius: 0.2rem;
 }
-.photoProfil {
-  margin-left: 5rem;
-  margin-right: 2rem;
-}
+
 .textProfil {
   display: flex;
   flex-direction: column;
 }
-.nameProfil {
+#nameProfil {
   font-size: 3rem;
   color: #d3573c;
   margin: 1rem 0;
 }
-.locationProfil {
+#locationProfil {
   color: #901c1c;
   font-size: 1.5rem;
-  margin-bottom: 1rem0;
+  margin-bottom: 0;
+  margin-top: 0;
 }
+
 #headerFiche {
   margin-left: 5rem;
 }
@@ -224,7 +225,7 @@ video {
   position: fixed;
   bottom: 1%;
   right: 2%;
-  background-color: #d3573c;
+  background-color: #db8876;
   border-radius: 0.2rem;
 }
 
@@ -236,36 +237,29 @@ video {
   display: none;
   position: absolute;
   z-index: 1;
-  left: 25%;
-  top: 10%;
+  overflow: auto;
+  top: -5%;
   width: 50%;
   max-width: 1000px;
-  overflow: auto;
-  background-color: #d3573c;
+
+  background-color: #db8876;
+  padding: 2rem;
+  margin-left: 22%;
 }
 
-.contactez,
-.photographe-name {
-  font-size: 3.5rem;
-  margin-left: 4rem;
-}
-.modal-body {
-  padding: 15px 8%;
-  margin: 15px auto;
+#form-title {
+  font-size: 2rem;
+  margin-left: 0rem;
+  text-align: left;
 }
 
 label {
-  font-family: var(--font-default);
   font-size: 2rem;
-  font-weight: normal;
+
   display: inline-block;
   margin-bottom: 11px;
 }
-input {
-  padding: 8px;
-  border: 0.8px solid #ccc;
-  outline: none;
-}
+
 .text-control {
   margin: 0;
   padding: 8px;
@@ -319,10 +313,10 @@ input {
 .btn-submit {
   background: #901c1c;
   display: block;
-  margin: 2rem auto;
+  margin: 2rem 0;
   border-radius: 7px;
   font-size: 1rem;
-  padding: 12px 82px;
+  padding: 1rem 2rem;
   color: #fff;
   cursor: pointer;
   border: 0;
@@ -391,16 +385,15 @@ input {
     padding-top: 20px;
   }
 
-  header {
+  #header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 0.2rem;
-    margin-right: 0;
+    justify-content: space-around;
+    margin: auto;
     padding-bottom: 2rem;
   }
   h1 {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     font-size: 1.2rem;
   }
 
@@ -440,8 +433,16 @@ input {
     left: 35%;
   }
 
+  #mainFiche {
+    margin-bottom: 2rem;
+  }
+
+  #headerFiche {
+    margin-left: 0.5rem;
+  }
+
   .profil {
-    margin: 2rem 0 3rem 0;
+    margin: 2rem 0 1rem 0;
     padding: 0.2rem;
   }
   .contactButton {
@@ -451,22 +452,57 @@ input {
     left: 25%;
     bottom: 1rem;
   }
-  .photoProfil {
+  #photoProfil {
     margin: 1rem 0 0 -2.2rem;
   }
-  .photoProfil img {
-    width: 10rem;
-    height: 10rem;
+  #photoProfil img {
+    width: 8rem;
+    height: 8rem;
   }
 
-  .nameProfil {
+  #nameProfil {
     text-align: left;
     font-size: 2rem;
-    color: #d3573c;
+
     margin: 1rem 0;
   }
 
   .scrollProfile {
+    display: none;
+  }
+
+  .bground {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0%;
+    top: 0%;
+    width: 82%;
+    max-width: 1000px;
+    overflow: auto;
+    background-color: #db8876;
+    padding-top: 0;
+    margin: 0;
+  }
+  label {
+    font-size: 1.8rem;
+
+    display: inline-block;
+    margin-bottom: 11px;
+  }
+  .btn-submit {
+    padding: 0.5rem 3rem;
+    margin-left: 20%;
+  }
+  .text-control {
+    margin: 0;
+    padding: 1px;
+    width: 95%;
+    border-radius: 8px;
+    font-size: 2rem;
+    height: 55px;
+  }
+  .sort {
     display: none;
   }
 }

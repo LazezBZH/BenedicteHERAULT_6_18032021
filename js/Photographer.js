@@ -47,6 +47,8 @@ class Photographer {
     document.getElementById(
       "photoProfil"
     ).innerHTML = `<img src="medias/photographersIDPhotosb/${this.portrait}" >`;
+    document.getElementById("form-title").innerHTML =
+      "Contactez-moi </br>" + this.name;
 
     this.displayTags();
   }
