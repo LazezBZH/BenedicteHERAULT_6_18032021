@@ -127,6 +127,10 @@ main img {
 
 /*fiches par photographe* profil*/
 
+#mainFiche {
+  margin-bottom: 5rem;
+}
+
 .profil {
   display: flex;
   flex-direction: row;
@@ -139,8 +143,11 @@ main img {
   height: 1rem;
   border: none;
   margin-top: 1.8rem;
+  margin-right: 1rem;
   padding: 1rem;
   line-height: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: white;
   background-color: #901c1c;
   border-radius: 0.2rem;
@@ -168,6 +175,7 @@ main img {
 }
 
 /*fiches par photographe* medias*/
+
 #medias figure {
   width: 20rem;
   height: 20rem;
@@ -190,7 +198,6 @@ main img {
 }
 
 #medias img {
-  border-radius: 0%;
   width: 20rem;
   height: 20rem;
   object-fit: cover;
@@ -209,6 +216,7 @@ video {
   justify-content: space-around;
 }
 
+/*scroll page photographe*/
 .scrollProfile {
   color: black;
   font-size: 1rem;
@@ -216,51 +224,26 @@ video {
   position: fixed;
   bottom: 1%;
   right: 2%;
-  background-color: #db8876;
+  background-color: #d3573c;
   border-radius: 0.2rem;
 }
 
 /*modale*/
-.btn-submit {
-  background: #901c1c;
-  margin-top: 2rem;
-  padding: 1em;
-  color: #fff;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 16px;
+.fiche {
+  position: relative;
 }
-
-.btn-submit:disabled {
-  background: grey;
-  cursor: not-allowed;
-}
-
 .bground {
   display: none;
   position: absolute;
   z-index: 1;
-  left: 20%;
+  left: 25%;
   top: 10%;
-
-  width: 60%;
+  width: 50%;
+  max-width: 1000px;
   overflow: auto;
   background-color: #d3573c;
 }
 
-.content {
-  margin: 5% auto;
-  width: 100%;
-  max-width: 500px;
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
-  background: #232323;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  color: #fff;
-  padding-top: 10px;
-}
 .contactez,
 .photographe-name {
   font-size: 3.5rem;
@@ -325,7 +308,7 @@ input {
   content: " ";
   height: 33px;
   width: 3px;
-  background-color: #fff;
+  background-color: white;
 }
 .close:before {
   transform: rotate(45deg);
@@ -343,6 +326,62 @@ input {
   color: #fff;
   cursor: pointer;
   border: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/*page photographe bouton tri*/
+.sort {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 17%;
+}
+#sort-txt {
+  padding-top: 1.5rem;
+  font-weight: 600;
+}
+.sort-list i {
+  margin: 0 0 0 1.5rem;
+}
+.sort-list {
+  color: white;
+  font-weight: 600;
+  background-color: #901c1c;
+
+  margin-left: 1rem;
+  border-radius: 0.4rem;
+}
+
+.sort-list li {
+  padding: 0.8rem 1.2rem 1rem 1rem;
+}
+
+#popularity-btn {
+  display: flex;
+  flex-direction: row;
+}
+
+#sort-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  max-height: 2.3rem;
+  -webkit-transition: 0.8s all 0.3s;
+  -o-transition: 0.8s all 0.3s;
+  transition: 0.8s all 0.3s;
+  border: 1rem solid #901c1c;
+  border-radius: 0.3rem;
+}
+#sort-list ul:hover {
+  max-height: 150rem;
+}
+
+.sort-by_date,
+.sort-by_title {
+  border-top: solid 1px #d3573c;
 }
 
 /*RESPONSIVE*/

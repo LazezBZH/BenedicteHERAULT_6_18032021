@@ -73,7 +73,11 @@ class List {
     });
 
     this.hideAll();
-    this.displayPhotographers(this.filtered);
+    if (this.activeTags.length === 0) {
+      this.displayPhotographers(this.all);
+    } else {
+      this.displayPhotographers(this.filtered);
+    }
   }
 
   hideAll() {

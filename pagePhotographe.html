@@ -34,7 +34,7 @@
         </div>
       </header>
     
-
+<div class="fiche">
 
    
           <div class="bground">
@@ -51,7 +51,7 @@
                 name="contact"
                 action="index.html"
                 method="get"
-                onsubmit="return validate();"
+                
               >
                 <div class="form-data">
                   
@@ -118,8 +118,10 @@
                   type="submit"
                   value="Envoyer"
                   
-                />
-              </form></div></div></div>
+                /></div>
+              </div>
+              </form>
+            </div>
 
 
     <main >
@@ -129,25 +131,65 @@
 
 
 
-    <div class="fiche">
-      <div id="mainFiche"></div>
-      <div  id="medias"></div>
+    
+      <div id="mainFiche">
+     
+        
+     
+
+        <section class="profil">
+          <div class="textProfil">
+            <h2 id="nameProfil"></h2>
+            <p id="locationProfil"></p>
+            <p id="taglineProfil"></p>
+            <div id="tagProfil"></div>
+          </div>  
+          <button class="contactButton" id="contactButton">Contactez-moi</button>
+          <div id="photoProfil"><img src="" alt=""></div>
+         </section>
+        
+      </div>
+
+
+      <!--Trier-->
+        
+
+
+      <section id="medias"></section>
+
+
+      <section class="sort">
+          <div id='sort-txt'>Triez-par</div>
+     
+        
+          <div id="sort-list" class="sort-list"><ul >
+            <li id="popularity-btn" class="sort-by sort-by_popu">Popularité     
+            <div><i class="fas fa-chevron-up"></i></div></li>
+            <li  id="date-btn" class="sort-by sort-by_date">Date</li>
+            <li id="title-btn" class="sort-by sort-by_title">Titre</li>
+          </ul></div>
+
+        
+        </section>
+
       <div class="scrollProfile">test</div>
 
 
 
       
    
-    </main> 
-  <script type="text/javascript" src="js/scrollProfil.js"></script>
+    </main>
+     
+  </div>
+   <script type="text/javascript" src="js/scrollProfil.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
       <script type="text/javascript" src="js/Image.js"></script>
       <script type="text/javascript" src="js/Video.js"></script>
       <script type="text/javascript" src="js/Photographer.js"></script>
       <script type="text/javascript" src="js/MediaList.js"></script>
-      <script type="text/javascript" src="js/Media.js"></script>
+     <!-- <script type="text/javascript" src="js/Media.js"></script>-->
       <script type="text/javascript" src="js/MediaFactory.js"></script>
-      <script type="text/javascript" src="js/pagePhotographe2.js"></script>
-      <script type="text/javascript" src="js/modal.js"></script>
-  </div>
+      <script type="text/javascript" src="js/pagePhotographe.js"></script>
+      
   </body>
 </html>

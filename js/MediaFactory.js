@@ -1,14 +1,11 @@
 class MediaFactory {
   build(data) {
-    let type = "image";
-    let src = "";
-
     if (data.hasOwnProperty("image")) {
-      type = "image";
+      data.src = data.image;
 
       return new Image(data);
     } else {
-      type = "video";
+      data.src = data.video;
 
       return new Video(data);
     }

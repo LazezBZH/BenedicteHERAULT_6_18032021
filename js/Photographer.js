@@ -26,5 +26,28 @@ class Photographer {
         <div class="tags">${tagHtml}</div>
       </a>`;
   }
+
+  displayTags() {
+    let html = "";
+
+    this.tags.forEach((tag) => {
+      html += `<span class="tag-photographe">#${tag}</span>`;
+    });
+    document.getElementById("tagProfil").innerHTML = html;
+  }
+
+  displayProfil() {
+    document.getElementById("nameProfil").innerHTML = this.name;
+    document.getElementById("locationProfil").innerHTML =
+      this.city + ", " + this.country;
+    document.getElementById("taglineProfil").innerHTML = this.tagline;
+    //document.getElementById("photoProfil").innerHTML = (
+    //<img src="/medias/photographersIDPhotosb/${this.portrait}" />
+    //);
+    document.getElementById(
+      "photoProfil"
+    ).innerHTML = `<img src="medias/photographersIDPhotosb/${this.portrait}" >`;
+
+    this.displayTags();
+  }
 }
-// construction de chaque photographe, html de main généré

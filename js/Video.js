@@ -9,4 +9,17 @@ class Video {
     this.src = data.src;
     this.title = data.title;
   }
+  render() {
+    return `
+    <figure>
+    <video controls>
+    <source src="medias/${this.photographerId}/${this.src}" type="video/mp4">
+    </video>
+    <figcaption>${this.title}
+    <div class="mediaLikes">
+    ${this.likes} <i class="fas fa-heart"></i>
+    </div>
+    </figcaption>
+    </figure>`;
+  }
 }
