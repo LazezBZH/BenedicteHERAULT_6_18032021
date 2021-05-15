@@ -16,4 +16,8 @@ fetch("js/donnees.json")
 
     list.listenForFiltering();
     list.displayPhotographers(list.all);
+
+    if (query("tag")) {
+      list.filter(query("tag"));
+    }
   });

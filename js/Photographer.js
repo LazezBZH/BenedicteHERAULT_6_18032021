@@ -31,8 +31,9 @@ class Photographer {
     let html = "";
 
     this.tags.forEach((tag) => {
-      html += `<span class="tag-photographe">#${tag}</span>`;
+      html += `<a href="index.html?tag=${tag}" class="tag-photographe" id="${tag}">#${tag}</a>`;
     });
+
     document.getElementById("tagProfil").innerHTML = html;
   }
 
@@ -41,9 +42,7 @@ class Photographer {
     document.getElementById("locationProfil").innerHTML =
       this.city + ", " + this.country;
     document.getElementById("taglineProfil").innerHTML = this.tagline;
-    //document.getElementById("photoProfil").innerHTML = (
-    //<img src="/medias/photographersIDPhotosb/${this.portrait}" />
-    //);
+
     document.getElementById(
       "photoProfil"
     ).innerHTML = `<img src="medias/photographersIDPhotosb/${this.portrait}" >`;
@@ -51,5 +50,6 @@ class Photographer {
       "Contactez-moi </br>" + this.name;
 
     this.displayTags();
+    console.log(this.tags);
   }
 }

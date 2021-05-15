@@ -15,7 +15,7 @@ class Image {
     <img src="medias/${this.photographerId}b/${this.src}" alt="${this.title}"/>
     <figcaption>
     <div class="mediaTitle">${this.title}</div>
-    <div class="mediaLikes">${this.likes} <i class="fas fa-heart"></i>
+    <div class="mediaLikes" id="${this.id}likes">${this.likes} <i class="fas fa-heart" id="${this.id}heart"></i>
     </div>
     </igcaption>
     </figure>`;

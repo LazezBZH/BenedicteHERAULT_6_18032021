@@ -16,8 +16,7 @@ class Video {
     <source src="medias/${this.photographerId}/${this.src}" type="video/mp4">
     </video>
     <figcaption>${this.title}
-    <div class="mediaLikes">
-    ${this.likes} <i class="fas fa-heart"></i>
+    <div class="mediaLikes" id="${this.id}likes">${this.likes} <i class="fas fa-heart" id="${this.id}heart"></i>
     </div>
     </figcaption>
     </figure>`;
