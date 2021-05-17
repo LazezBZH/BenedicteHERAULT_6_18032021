@@ -68,15 +68,15 @@ class MediaList {
     for (let el of elements) {
       el.addEventListener("click", (e) => {
         let order = e.target.getAttribute("data-order");
-        if (this.order == order) {
-          this.isAscending == !this.isAscending;
+        if (this.order != order) {
+          this.isAscending = true;
         } else {
-          this.direction = "asc";
+          this.isAscending = !this.isAscending;
         }
 
         this.order = order;
 
-        console.log(this.order, this.direction);
+        console.log(this.order, this.isAscending);
         this.reorder(order);
       });
     }
@@ -89,19 +89,31 @@ class MediaList {
   }
   reorderByPopularity() {
     this.all = this.all.sort((a, b) => {
-      return a.likes - b.likes;
+      if (this.isAscending) {
+        return a.likes - b.likes;
+      } else {
+        return b.likes - a.likes;
+      }
     });
   }
   reorderByDate() {
     this.all = this.all.sort((a, b) => {
       let dateA = new Date(a.date);
       let dateB = new Date(b.date);
-      return dateA - dateB;
+      if (this.isAscending) {
+        return dateA - dateB;
+      } else {
+        return dateB - dateA;
+      }
     });
   }
   reorderByTitle() {
     this.all = this.all.sort((a, b) => {
-      return a.title > b.title ? 1 : -1;
+      if (this.isAscending) {
+        return a.title > b.title ? 1 : -1;
+      } else {
+        return b.title > a.title ? 1 : -1;
+      }
     });
   }
 }

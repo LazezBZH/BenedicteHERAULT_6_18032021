@@ -26,6 +26,7 @@ fetch("js/donnees.json")
     list.display(list.all);
     list.listenForReordering();
   });
+
 function getMedias(medias) {
   return medias.filter((media) => media.photographerId == query("id"));
 }
