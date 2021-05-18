@@ -25,6 +25,8 @@ fetch("js/donnees.json")
 
     list.display(list.all);
     list.listenForReordering();
+    let slider = new Slider(list.all);
+    slider.listenForStart();
   });
 
 function getMedias(medias) {

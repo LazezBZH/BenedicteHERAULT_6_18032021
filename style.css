@@ -12,6 +12,8 @@
   width: 200px;
   margin: 1rem 0 0 0;
 }
+
+/*PAGE ACCUEIL*/
 #header {
   display: flex;
   justify-content: space-around;
@@ -127,7 +129,7 @@ main img {
   font-weight: 600;
 }
 
-/*fiches par photographe* profil*/
+/*FICHES PAR PHOTOGRAPHE* profil*/
 
 #mainFiche {
   margin-bottom: 5rem;
@@ -175,7 +177,7 @@ main img {
   margin-left: 5rem;
 }
 
-/*fiches par photographe* medias*/
+/*FICHES PAR PHOTOGRAPHE* medias*/
 
 #medias figure {
   width: 20rem;
@@ -229,7 +231,7 @@ video {
   border-radius: 0.2rem;
 }
 
-/*modale*/
+/*FICHES PAR PHOTOGRAPHE* formulaire de contact*/
 .fiche {
   position: relative;
 }
@@ -272,6 +274,9 @@ label {
   color: red;
   font-size: 1rem;
   background-color: honeydew;
+}
+input {
+  border: none;
 }
 .erreur-input {
   margin: 0;
@@ -324,7 +329,7 @@ label {
   font-weight: 600;
 }
 
-/*page photographe bouton tri*/
+/*FICHES PAR PHOTOGRAPHE* bouton tri*/
 .sort {
   margin-left: 4rem;
   display: flex;
@@ -378,6 +383,65 @@ label {
   border-top: solid 1px #d3573c;
 }
 
+/*FICHES PAR PHOTOGRAPHE* slider*/
+#slider {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#slider-all {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  max-height: 98%;
+}
+.arrow {
+  color: rgb(144, 28, 28);
+  font-size: 8rem;
+}
+#next {
+  margin-left: -50px;
+}
+#close-slider {
+  font-size: 4rem;
+  color: rgb(144, 28, 28);
+  font-weight: 100;
+}
+.close-slider {
+  display: flex;
+  flex-direction: row;
+}
+.slider-content {
+  padding: 0 30px;
+  border-radius: 8px;
+  padding: auto;
+  color: #901c1c;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.slider-content figure {
+  width: 100%;
+  padding: 0;
+  margin: 2rem 0;
+}
+.slider-content img {
+  max-width: 80vw;
+  height: 85vh;
+  padding: auto;
+  object-fit: cover;
+}
+.slider-content video {
+  width: auto;
+}
+
+/**/
 /*RESPONSIVE*/
 @media screen and (max-width: 800px) {
   #logo img {
@@ -471,12 +535,14 @@ label {
     display: none;
   }
 
+  /*formulaire*/
+
   .bground {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     left: 0%;
-    top: 0%;
+    top: 7%;
     width: 82%;
     max-width: 1000px;
     overflow: auto;
@@ -504,5 +570,38 @@ label {
   }
   .sort {
     display: none;
+  }
+
+  /*slider*/
+  #slider {
+    width: 100%;
+  }
+  #slider-all {
+    width: 100%;
+  }
+  .arrow {
+    font-size: 4rem;
+  }
+  .close-slider {
+    width: 90%;
+  }
+  .slider-content {
+    width: 90%;
+    padding: 0;
+  }
+  .slider-content figure {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .slider-content img {
+    width: 100%;
+    height: auto;
+  }
+  #next {
+    margin-left: -30px;
+  }
+  #close-slider {
+    margin-top: -2rem;
   }
 }

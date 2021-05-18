@@ -11,13 +11,24 @@ class Image {
   }
   render() {
     return `
-    <figure>
-    <img src="medias/${this.photographerId}b/${this.src}" alt="${this.title}"/>
+    <figure >
+    <img src="medias/${this.photographerId}b/${this.src}" alt="${this.title}" class="diapo" data-media-id="${this.id}"/>
     <figcaption>
     <div class="mediaTitle">${this.title}</div>
     <div class="mediaLikes" id="${this.id}likes">${this.likes} <i class="fas fa-heart" id="${this.id}heart"></i>
     </div>
-    </igcaption>
+    </figcaption>
+    </figure>`;
+  }
+
+  renderSlide() {
+    return `
+    <figure >
+    <img src="medias/${this.photographerId}/${this.src}" alt="${this.title}" class="diapo" data-media-id="${this.id}"/>
+    <figcaption>
+    <div class="mediaTitle">${this.title}</div>
+    
+    </figcaption>
     </figure>`;
   }
 }
