@@ -76,6 +76,8 @@ class MediaList {
 
         this.order = order;
 
+        el.style.order == "0";
+
         console.log(this.order, this.isAscending);
         this.reorder(order);
       });

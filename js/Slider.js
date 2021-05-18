@@ -23,16 +23,16 @@ class Slider {
     let next = document.getElementById("next");
     let previous = document.getElementById("previous");
 
-    next.addEventListener("keydown", (e) => {
+    document.addEventListener("keydown", (e) => {
       if (e.keyCode == 37) {
         this.next();
         this.display();
       }
     });
 
-    previous.addEventListener("keydown", (e) => {
+    document.addEventListener("keydown", (e) => {
       if (e.keyCode == 39) {
-        this.previous;
+        this.previous();
         this.display();
       }
     });
