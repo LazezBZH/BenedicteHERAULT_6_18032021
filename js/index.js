@@ -1,3 +1,5 @@
+//va chercher les données de la page d'accueil dans le json
+
 fetch("js/donnees.json")
   .then(function (response) {
     if (!response.ok) {

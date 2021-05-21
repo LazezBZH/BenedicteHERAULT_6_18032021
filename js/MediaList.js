@@ -1,3 +1,5 @@
+//ensemble des média de la page d'un photographe
+
 class MediaList {
   constructor() {
     this.all = [];
@@ -17,6 +19,7 @@ class MediaList {
     document.getElementById("medias").innerHTML = html;
   }
 
+  //filtre sur les tags du photographe amenant à page d'accueil avec filtre des photographes ayant ce tag
   listenForFiltering() {
     let filters = document.querySelectorAll("tag-photographe");
     for (let i = 0; i < filters.length; i++) {
@@ -62,6 +65,7 @@ class MediaList {
     document.querySelector("main").innerHTML = "";
   }
 
+  //Tri des médias par date, popularité ou titre
   listenForReordering() {
     let elements = document.getElementsByClassName("sort-by");
 
@@ -117,5 +121,37 @@ class MediaList {
         return b.title > a.title ? 1 : -1;
       }
     });
+  }
+
+  increaseMediaLikes() {
+    let hearts = document.getElementsByClassName("heart");
+    for (let i = 0; i < hearts.length; i++) {
+      let heart = hearts[i];
+      let selected = heart.parentNode;
+      let likes = selected.parentNode.children[0];
+      let likesMedia = parseInt(likes.innerHTML);
+      let allLikes = document.getElementById("scrollLikes");
+      let allLikesNum = parseInt(allLikes.innerHTML);
+
+      heart.addEventListener("click", (e) => {
+        likesMedia = likesMedia + 1;
+        likes.innerHTML = likesMedia;
+        heart.setAttribute("style", "color:#901c1c");
+        allLikesNum = allLikesNum + 1;
+        allLikes.innerHTML = allLikesNum;
+      });
+    }
+  }
+  getAllPhotographerLikes() {
+    let likesMediaPhotographer = document.querySelectorAll(".mediaLikes");
+    let likesMediaPhotographerArray = Array.from(likesMediaPhotographer);
+    let sum = 0;
+    for (var i = 0; i < likesMediaPhotographerArray.length; i++) {
+      sum += parseInt(likesMediaPhotographerArray[i].innerHTML, 10);
+    }
+    console.log("et" + sum);
+    document.querySelector("#scrollLikes").textContent = sum;
+
+    document.getElementsByClassName("heart");
   }
 }

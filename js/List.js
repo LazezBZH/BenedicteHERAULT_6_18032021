@@ -1,3 +1,5 @@
+//liste des photographes pour la page d'acceuil
+
 class List {
   constructor() {
     this.all = [];
@@ -38,6 +40,7 @@ class List {
 
     return list;
   }
+
   //filtre sur les tags
   listenForFiltering() {
     let filters = document.querySelectorAll(".tag-filter");

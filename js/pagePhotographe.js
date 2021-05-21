@@ -6,6 +6,7 @@ fetch("js/donnees.json")
     return response.json();
   })
 
+  //récupération des médias du photographe (avec l'id du photographe)
   .then(function (json) {
     let list = new MediaList();
     let factory = new MediaFactory();
@@ -27,6 +28,9 @@ fetch("js/donnees.json")
     list.listenForReordering();
     let slider = new Slider(list.all);
     slider.listenForStart();
+    list.getAllPhotographerLikes();
+    list.increaseMediaLikes();
+    //list.increaseAllPhotographerLikes();
   });
 
 function getMedias(medias) {

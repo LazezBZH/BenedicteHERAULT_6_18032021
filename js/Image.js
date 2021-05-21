@@ -1,3 +1,5 @@
+//objet image créé par MediaFactory si le type du média est image
+
 class Image {
   constructor(data) {
     this.id = data.id;
@@ -11,24 +13,23 @@ class Image {
   }
   render() {
     return `
-    <figure >
-    <img src="medias/${this.photographerId}b/${this.src}" alt="${this.title}" class="diapo" data-media-id="${this.id}"/>
-    <figcaption>
-    <div class="mediaTitle">${this.title}</div>
-    <div class="mediaLikes" id="${this.id}likes">${this.likes} <i class="fas fa-heart" id="${this.id}heart"></i>
-    </div>
-    </figcaption>
+    <figure>
+     <img src="medias/${this.photographerId}b/${this.src}" alt="${this.title}" class="diapo" id="${this.id}"/>
+     <figcaption>
+      <div class="mediaTitle">${this.title}</div>
+      <div> <span class="mediaLikes" id="${this.id}likes">${this.likes}</span><span> <i class="heart fas fa-heart" id="${this.id}heart"></i></span>
+      </div>
+     </figcaption>
     </figure>`;
   }
 
   renderSlide() {
     return `
-    <figure >
-    <img src="medias/${this.photographerId}/${this.src}" alt="${this.title}" class="diapo" data-media-id="${this.id}"/>
-    <figcaption>
-    <div class="mediaTitle">${this.title}</div>
-    
-    </figcaption>
+    <figure>
+     <img src="medias/${this.photographerId}/${this.src}" alt="${this.title}" class="diapo" id="${this.id}" />
+     <figcaption>
+      <div class="mediaTitle">${this.title}</div>
+     </figcaption>
     </figure>`;
   }
 }

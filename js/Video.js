@@ -1,3 +1,5 @@
+//objet video créé par MediaFactory si le type du média est vidéo
+
 class Video {
   constructor(data) {
     this.id = data.id;
@@ -12,24 +14,26 @@ class Video {
   render() {
     return `
     <figure>
-    <video  class="diapo" data-media-id="${this.id}" >
-    <source src="medias/${this.photographerId}/${this.src}" type="video/mp4">
-    </video>
-    <figcaption>${this.title}
-    <div class="mediaLikes" id="${this.id}likes">${this.likes} <i class="fas fa-heart" id="${this.id}heart"></i>
-    </div>
-    </figcaption>
+      <video   >
+        <source src="medias/${this.photographerId}/${this.src}" type="video/mp4" id="${this.id}" class="diapo">
+      </video>
+      <figcaption>
+        <div class="mediaTitle">${this.title}</div>
+        <div> <span class="mediaLikes" id="${this.id}likes">${this.likes}</span><span> <i class="heart fas fa-heart" id="${this.id}heart"></span></i>
+        </div>
+      </figcaption>
     </figure>`;
   }
 
   renderSlide() {
     return `
     <figure>
-    <video controls autoplay>
-    <source src="medias/${this.photographerId}/${this.src}" type="video/mp4">
-    </video>
-    <figcaption>${this.title}
-    </figcaption>
+      <video controls autoplay>
+        <source src="medias/${this.photographerId}/${this.src}" type="video/mp4">
+      </video>
+      <figcaption>
+      ${this.title}
+      </figcaption>
     </figure>`;
   }
 }

@@ -1,3 +1,5 @@
+//données de chaque photographe
+
 class Photographer {
   constructor(data) {
     this.name = data.name;
@@ -27,6 +29,7 @@ class Photographer {
       </a>`;
   }
 
+  //récupération des tags du photographe (page photographe)
   displayTags() {
     let html = "";
 
@@ -37,6 +40,7 @@ class Photographer {
     document.getElementById("tagProfil").innerHTML = html;
   }
 
+  //profil du photographe (page photographe)
   displayProfil() {
     document.getElementById("nameProfil").innerHTML = this.name;
     document.getElementById("locationProfil").innerHTML =
@@ -48,7 +52,7 @@ class Photographer {
     ).innerHTML = `<img src="medias/photographersIDPhotosb/${this.portrait}" >`;
     document.getElementById("form-title").innerHTML =
       "Contactez-moi </br>" + this.name;
-
+    document.getElementById("scrollPrice").innerHTML = `${this.price}€/jour`;
     this.displayTags();
     console.log(this.tags);
   }

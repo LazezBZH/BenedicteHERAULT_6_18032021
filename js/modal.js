@@ -17,7 +17,8 @@ let erreurMail = document.getElementById("erreur-mail");
 let erreurMessage = document.getElementById("erreur-message");
 
 // REGEX
-let mailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; //regular expression mail source https://emailregex.com/
+let mailRegex =
+  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; //regular expression mail source https://emailregex.com/
 
 //EVENTS
 launchBtn.addEventListener("click", launchModal);
@@ -120,5 +121,18 @@ function validerMessage(e) {
 
 function sendForm(e) {
   modalBg.style.display = "none";
-  launchBtn.style.display = "block";
 }
+
+//affichage des inputs dans la console
+document.getElementById("first").addEventListener("input", function () {
+  console.log("Prénom: " + this.value);
+});
+document.getElementById("last").addEventListener("input", function () {
+  console.log("Nom: " + this.value);
+});
+document.getElementById("email").addEventListener("input", function () {
+  console.log("Adresse mail: " + this.value);
+});
+document.getElementById("message").addEventListener("input", function () {
+  console.log("Message: " + this.value);
+});

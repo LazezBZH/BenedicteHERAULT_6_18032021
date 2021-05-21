@@ -200,6 +200,10 @@ main img {
   justify-content: space-between;
 }
 
+figcaption i {
+  color: #db8876;
+}
+
 #medias img {
   width: 20rem;
   height: 20rem;
@@ -221,16 +225,19 @@ video {
 
 /*scroll page photographe*/
 .scrollProfile {
+  display: flex;
   color: black;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
   position: fixed;
   bottom: 1%;
   right: 2%;
   background-color: #db8876;
   border-radius: 0.2rem;
 }
-
+#scrollPrice {
+  margin-left: 2rem;
+}
 /*FICHES PAR PHOTOGRAPHE* formulaire de contact*/
 .fiche {
   position: relative;

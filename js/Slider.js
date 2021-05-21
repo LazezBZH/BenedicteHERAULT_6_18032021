@@ -1,3 +1,5 @@
+//Diaporama dans une lightbox
+
 class Slider {
   constructor(medias) {
     this.slides = document.querySelectorAll(".diapo");
@@ -6,11 +8,13 @@ class Slider {
     this.medias = medias;
     this.currentIndex = 0;
   }
+
+  //lancer le diaporama
   listenForStart() {
     this.slides.forEach((slide) => {
       slide.addEventListener("click", (e) => {
         this.slider.style.display = "flex";
-        let id = e.target.getAttribute("data-media-id");
+        let id = e.target.getAttribute("id");
         this.currentIndex = this.medias.findIndex((media) => media.id == id);
 
         this.display();
@@ -19,6 +23,7 @@ class Slider {
     this.listenForMoves();
   }
 
+  //navigation entre les médias, click sur flèche + nav au clavier
   listenForMoves() {
     let next = document.getElementById("next");
     let previous = document.getElementById("previous");
@@ -47,6 +52,7 @@ class Slider {
     });
   }
 
+  //fonctions
   display() {
     let media = this.medias[this.currentIndex];
     let html = "";
@@ -71,6 +77,7 @@ class Slider {
   }
 }
 
+//fermeture lightbox
 let closeDiapo = document.getElementById("close-slider");
 closeDiapo.addEventListener("click", closeSlider);
 
