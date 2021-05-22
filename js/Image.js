@@ -13,7 +13,7 @@ class Image {
   }
   render() {
     return `
-    <figure>
+    <figure >
      <img src="medias/${this.photographerId}b/${this.src}" alt="${this.title}" class="diapo" id="${this.id}"/>
      <figcaption>
       <div class="mediaTitle">${this.title}</div>

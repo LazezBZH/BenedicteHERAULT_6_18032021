@@ -13,10 +13,12 @@ class Video {
   }
   render() {
     return `
-    <figure>
-      <video   >
-        <source src="medias/${this.photographerId}/${this.src}" type="video/mp4" id="${this.id}" class="diapo">
-      </video>
+    <figure >
+      
+        <video   class="diapo" id="${this.id}">
+        <source src="medias/${this.photographerId}/${this.src}" type="video/mp4"  >
+        </video>
+      
       <figcaption>
         <div class="mediaTitle">${this.title}</div>
         <div> <span class="mediaLikes" id="${this.id}likes">${this.likes}</span><span> <i class="heart fas fa-heart" id="${this.id}heart"></span></i>

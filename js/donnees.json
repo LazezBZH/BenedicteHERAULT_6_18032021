@@ -307,7 +307,7 @@
     {
       "id": 23134513,
       "photographerId": 527,
-      "title": "Boat Wonderer",
+      "title": "Boat Wanderer",
       "image": "Travel_Boat_Wanderer.jpg",
       "tags": ["travel"],
       "likes": 23,
@@ -347,8 +347,8 @@
     {
       "id": 23523535,
       "photographerId": 527,
-      "title": "Travel Rock Mountains",
-      "video": "Travel_Rock_Mountains.mp4",
+      "title": "Travel on the road",
+      "image": "Travel_On_the_Road.jpg",
       "tags": ["travel"],
       "likes": 85,
       "date": "2018-10-02",

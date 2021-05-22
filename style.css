@@ -2,7 +2,36 @@
 
 * {
   font-family: DM Sans;
+  cursor: context-menu;
 }
+.tag,
+.linkPhotographer,
+.identite,
+img,
+video,
+.tag-photographe,
+button,
+.sort li,
+#close-slider,
+.arrow,
+.scroll {
+  cursor: pointer;
+}
+.heart {
+  cursor: url("https://surlapage.fr/widget/cursors/11/1289417.gif"), default;
+}
+.slider-content img,
+.slider-content video {
+  cursor: context-menu;
+}
+#photoProfil img {
+  cursor: context-menu;
+}
+input,
+textarea {
+  cursor: auto;
+}
+
 .container {
   max-width: 1500px;
   margin: auto;
@@ -115,6 +144,7 @@ main img {
   background-color: #db8876;
   color: white;
 }
+
 /*scroll*/
 .scroll {
   position: fixed;
@@ -447,6 +477,7 @@ input {
 .slider-content video {
   padding: auto;
   width: auto;
+  height: 30rem;
 }
 
 /**/
