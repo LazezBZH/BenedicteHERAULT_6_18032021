@@ -66,9 +66,22 @@ class MediaList {
   }
 
   //Tri des médias par date, popularité ou titre
+  displayReorderList() {
+    let reorderAreaClosed = document.getElementById("sort-list_closed");
+    let reorderAreaOpen = document.getElementById("sort-list");
+    reorderAreaClosed.addEventListener("mouseover", function (evt) {
+      reorderAreaClosed.style.display = "none";
+      reorderAreaOpen.style.display = "flex";
+    });
+    reorderAreaOpen.addEventListener("click", function (evt) {
+      reorderAreaClosed.style.display = "flex";
+      reorderAreaOpen.style.display = "none";
+    });
+  }
+
   listenForReordering() {
     let elements = document.getElementsByClassName("sort-by");
-
+    let reorderAreaFirst = document.getElementById("sort-list_first");
     for (let el of elements) {
       el.addEventListener("click", (e) => {
         let order = e.target.getAttribute("data-order");
@@ -84,6 +97,8 @@ class MediaList {
 
         console.log(this.order, this.isAscending);
         this.reorder(order);
+        reorderAreaFirst.textContent = e.target.textContent;
+        //?????????? A REVOIR
       });
     }
   }
@@ -149,7 +164,7 @@ class MediaList {
     for (var i = 0; i < likesMediaPhotographerArray.length; i++) {
       sum += parseInt(likesMediaPhotographerArray[i].innerHTML, 10);
     }
-    console.log("et" + sum);
+    console.log("total des likes photographe= " + sum);
     document.querySelector("#scrollLikes").textContent = sum;
 
     document.getElementsByClassName("heart");

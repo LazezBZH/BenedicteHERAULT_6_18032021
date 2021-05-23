@@ -30,6 +30,7 @@ fetch("js/donnees.json")
     slider.listenForStart();
     list.getAllPhotographerLikes();
     list.increaseMediaLikes();
+    list.displayReorderList();
     //list.increaseAllPhotographerLikes();
   });
 

@@ -388,8 +388,36 @@ input {
 
   margin-left: 1rem;
   border-radius: 0.4rem;
+  position: relative;
+  display: none;
 }
 
+#sort-list_closed {
+  display: flex;
+
+  justify-content: space-between;
+  width: 11.5rem;
+  height: 4.3rem;
+  color: white;
+  font-weight: 600;
+  background-color: #901c1c;
+
+  margin-left: 1rem;
+  border-radius: 0.4rem;
+  position: absolute;
+  left: 4.5rem;
+}
+#sort-list_closed i {
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+#sort-list_closed div {
+  padding: 1rem;
+}
+#sort-list_first {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
 .sort-list li {
   padding: 0.8rem 1.2rem 1rem 1rem;
 }
