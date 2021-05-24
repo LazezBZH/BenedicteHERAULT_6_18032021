@@ -19,188 +19,212 @@
       src="https://kit.fontawesome.com/f272fe714d.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="shortcut icon" type="image/x-icon" href="/medias/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/medias/favicon.png" />
   </head>
   <body>
-    
-<!--HEADER-->      
+    <div class="container">
+      <!--HEADER-->
       <header id="headerFiche" role="banner">
         <div>
           <a
-          href="index.html"
-          id="logo"
-          aria-label="lien vers page d'accueil de FishEye "
-        >
-          <img src="medias/logo.png" alt="Logo de FishEye" />
+            tabindex="0"
+            href="index.html"
+            id="logo"
+            aria-label="lien vers page d'accueil de FishEye "
+          >
+            <img
+              src="medias/logo.png"
+              alt="Logo de FishEye, lien vers page d'accueil de FishEye"
+            />
           </a>
         </div>
       </header>
 
-<!--SLIDER-->
-    <div id="slider" class="slider"> 
-      <div id="slider-all">
-        
-        <div id="previous" class="arrow" aria-label="passer à la diapo suivante"><</div>
-        <div  class="close-slider"><div class="slider-content"> </div>
-        <div id="close-slider" aria-label="Fermer le diaporama">x</div></div>
-        <div id="next" class="arrow" aria-label="passer à la diapo suivante">></div>
-      </div>
-    </div>
-
-<!--FORMULAIRE DE CONTACT-->
-<div class="fiche">
-
- 
-          <div class="bground">
-            <div class="form-header">
-              <h2 id="form-title"></h2>
-            <span class="close" id="close"></span>
+      <!--SLIDER-->
+      <div id="slider" class="slider">
+        <div id="slider-all">
+          <div id="previous" class="arrow" tabindex="0">
+            <img
+              class="arrow"
+              src="medias/arrow left.png"
+              alt="Passer à la diapo précédente"
+            />
+          </div>
+          <div class="close-slider">
+            <div class="slider-content"></div>
+            <div id="close-slider" tabindex="0">
+              <img
+                class="cross"
+                src="medias/cross.png"
+                alt="Fermer le diaporama"
+              />
             </div>
-           
-            <div class="modal-body">
-           
+          </div>
+          <div>
+            <div id="next" class="arrow" tabindex="0">
+              <img
+                src="medias/arrow right.png"
+                alt="Passer à la diapo suivante"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
 
-              <form
-                id="form"
-                name="contact"
-                action="index.html"
-                method="get"
-                
-              >
-                <div class="form-data">
-                  
-                  <label for="first">Prénom</label
-                  ><br />
-                  <input
-                    class="text-control"
-                    type="text"
-                    id="first"
-                    name="first"
-                    required="required"
-                    minlength="2"
-                  /><br />
-                  <span class="erreur" id="erreur-prenom"></span>
-                 
-                </div>
+      <!--FORMULAIRE DE CONTACT-->
+      <div class="fiche">
+        <div class="bground">
+          <div class="form-header">
+            <h2 id="form-title"></h2>
+            <img
+              id="close"
+              src="medias/cross close.png"
+              alt="Fermer le formulaire de contact sans envoyer de message"
+            />
+          </div>
 
-                <div class="form-data">
-                  <label for="last">Nom</label
-                  ><br />
-                  <input
-                    class="text-control"
-                    type="text"
-                    id="last"
-                    name="last"
-                    required="required"
-                    minlength="2"
-                  /><br />
-                  <span class="erreur" id="erreur-nom"></span>
-                  
-                </div>
-                <div class="form-data">
-                  <label for="email">E-mail</label
-                  ><br />
-                  <input
-                    class="text-control"
-                    type="email"
-                    id="email"
-                    name="email"
-                    required="required"
-                  /><br />
-                  <span class="erreur" id="erreur-mail"></span>
-                
-                </div>
-                
-             <div class="form-data">
-                  <label for="message">Votre message</label
-                  ><br />
-                  <textarea
-                    class="text-control" 
-                    id="message"
-                    name="message"
-                    required="required"
-                    minlength="5"
-                  ></textarea><br />
-                  <span class="erreur" id="erreur-message"></span>
-                  
-                
-                
+          <div class="modal-body">
+            <form id="form" name="contact" action="index.html" method="get">
+              <div class="form-data">
+                <label for="first">Prénom</label><br />
                 <input
-                  class="button btn-submit"
-                  id="btn-envoi"
-                  type="submit"
-                  value="Envoyer"
-                  
-                /></div>
+                  class="text-control"
+                  type="text"
+                  id="first"
+                  name="first"
+                  required="required"
+                  minlength="2"
+                /><br />
+                <span class="erreur" id="erreur-prenom"></span>
               </div>
-              </form>
+
+              <div class="form-data">
+                <label for="last">Nom</label><br />
+                <input
+                  class="text-control"
+                  type="text"
+                  id="last"
+                  name="last"
+                  required="required"
+                  minlength="2"
+                /><br />
+                <span class="erreur" id="erreur-nom"></span>
+              </div>
+              <div class="form-data">
+                <label for="email">E-mail</label><br />
+                <input
+                  class="text-control"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required="required"
+                /><br />
+                <span class="erreur" id="erreur-mail"></span>
+              </div>
+
+              <div class="form-data">
+                <label for="message">Votre message</label><br />
+                <textarea
+                  class="text-control"
+                  id="message"
+                  name="message"
+                  required="required"
+                  minlength="5"
+                ></textarea
+                ><br />
+                <span class="erreur" id="erreur-message"></span>
+
+                <div
+                  class="button btn-submit btn-submit_off"
+                  id="btn-envoi"
+                  disabled
+                >
+                  Envoyer
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!--FICHE PHOTOGRAPHE-->
+        <main>
+          <div id="mainFiche">
+            <section class="profil">
+              <div class="textProfil">
+                <h2 id="nameProfil"></h2>
+                <p id="locationProfil"></p>
+                <p id="taglineProfil"></p>
+                <div id="tagProfil"></div>
+              </div>
+              <button class="contactButton" id="contactButton">
+                Contactez-moi
+              </button>
+              <div id="photoProfil"></div>
+            </section>
+          </div>
+
+          <!--Trier-->
+
+          <section id="medias"></section>
+
+          <section class="sort">
+            <div id="sort-txt">Triez-par</div>
+
+            <div id="sort-list_closed">
+              <div id="sort-list_first" tabindex="2">Popularité</div>
+              <div><i class="fas fa-chevron-up"></i></div>
             </div>
+            <div id="sort-list" class="sort-list">
+              <ul tabindex="1">
+                <li
+                  tabindex="2"
+                  id="popularity-btn"
+                  class="sort-by sort-by_popu"
+                  data-order="popularity"
+                >
+                  Popularité
+                  <div><i class="fas fa-chevron-up"></i></div>
+                </li>
+                <li
+                  tabindex="2"
+                  id="date-btn"
+                  class="sort-by sort-by_date"
+                  data-order="date"
+                >
+                  Date
+                </li>
+                <li
+                  tabindex="2"
+                  id="title-btn"
+                  class="sort-by sort-by_title"
+                  data-order="title"
+                >
+                  Titre
+                </li>
+              </ul>
+            </div>
+          </section>
 
-            
-<!--FICHE PHOTOGRAPHE-->
-    <main >
-      
-  
-      <div id="mainFiche">
-     
-        
-     
-
-        <section class="profil">
-          <div class="textProfil">
-            <h2 id="nameProfil"></h2>
-            <p id="locationProfil"></p>
-            <p id="taglineProfil"></p>
-            <div id="tagProfil"></div>
-          </div>  
-          <button class="contactButton" id="contactButton">Contactez-moi</button>
-          <div id="photoProfil"><img src="" alt=""></div>
-         </section>
-        
+          <div class="scrollProfile">
+            <div>
+              <span id="scrollLikes"></span> <i class="fas fa-heart"></i>
+            </div>
+            <div id="scrollPrice">test</div>
+          </div>
+        </main>
       </div>
 
+      <script type="text/javascript" src="js/scrollProfil.js"></script>
+      <script type="text/javascript" src="js/utils.js"></script>
+      <script type="text/javascript" src="js/modal.js"></script>
+      <script type="text/javascript" src="js/Image.js"></script>
+      <script type="text/javascript" src="js/Video.js"></script>
+      <script type="text/javascript" src="js/Photographer.js"></script>
+      <script type="text/javascript" src="js/MediaList.js"></script>
+      <script type="text/javascript" src="js/Slider.js"></script>
+      <script type="text/javascript" src="js/MediaFactory.js"></script>
 
-      <!--Trier-->
-        
-
-
-      <section id="medias"></section>
-
-
-      <section class="sort">
-          <div id='sort-txt'>Triez-par</div>
-     
-          <div  id="sort-list_closed"><div id="sort-list_first">Popularité</div><div><i class="fas fa-chevron-up"></i></div></div>
-          <div id="sort-list" class="sort-list"><ul >
-            <li id="popularity-btn" class="sort-by sort-by_popu" data-order="popularity">Popularité     
-            <div><i class="fas fa-chevron-up"></i></div></li>
-            <li  id="date-btn" class="sort-by sort-by_date" data-order="date">Date</li>
-            <li id="title-btn" class="sort-by sort-by_title" data-order="title">Titre</li>
-          </ul></div>
-
-        
-        </section>
-
-      <div class="scrollProfile"><div ><span id="scrollLikes"></span>  <i class=" fas fa-heart" ></i></div><div id="scrollPrice">test</div></div>
-      
-      
-    </main>
-     
-  </div>
-  
-    <script type="text/javascript" src="js/scrollProfil.js"></script>
-    <script type="text/javascript" src="js/utils.js"></script>
-    <script type="text/javascript" src="js/modal.js"></script>
-    <script type="text/javascript" src="js/Image.js"></script>
-    <script type="text/javascript" src="js/Video.js"></script>
-    <script type="text/javascript" src="js/Photographer.js"></script>
-    <script type="text/javascript" src="js/MediaList.js"></script>
-   <script type="text/javascript" src="js/Slider.js"></script>
-    <script type="text/javascript" src="js/MediaFactory.js"></script>
-      
-    <script type="text/javascript" src="js/pagePhotographe.js"></script>
-   
-  
-      
+      <script type="text/javascript" src="js/pagePhotographe.js"></script>
+    </div>
   </body>
 </html>

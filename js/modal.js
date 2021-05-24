@@ -33,6 +33,8 @@ mail.addEventListener("keyup", validerMail);
 
 message.addEventListener("keyup", validerMessage);
 
+message.addEventListener("keyup", validerFormulaire);
+
 validationBtn.addEventListener("click", sendForm);
 
 function launchModal() {
@@ -103,12 +105,10 @@ function validerMail(e) {
 
 function validerMessage(e) {
   if (message.validity.valueMissing) {
-    e.preventDefault();
     erreurMessage.textContent = "* N'oubliez pas de nous laisser un message.";
     message.classList.replace("text-control", "erreur-input");
     return false;
   } else if (message.value.length < 5) {
-    e.preventDefault();
     erreurMessage.textContent = "* Votre message semble un peu court.";
     message.classList.replace("text-control", "erreur-input");
     return false;
@@ -119,20 +119,34 @@ function validerMessage(e) {
   }
 }
 
-function sendForm(e) {
-  modalBg.style.display = "none";
+function validerFormulaire(e) {
+  let prenomValide = validerPrenom();
+  let nomValide = validerNom();
+  let mailValide = validerMail();
+  let messageValide = validerMessage();
+
+  let formulaireValide =
+    prenomValide && nomValide && mailValide && messageValide;
+
+  if (formulaireValide) {
+    validationBtn.classList.remove("btn-submit_off");
+    validationBtn.classList.add("btn-submit_on");
+  } else {
+    validationBtn.classList.add("btn-submit_off");
+    validationBtn.classList.remove("btn-submit_on");
+  }
+}
+function sendForm() {
+  if (validationBtn.classList.contains("btn-submit_on")) {
+    modalBg.style.display = "none";
+    launchBtn.style.display = "block";
+  }
 }
 
 //affichage des inputs dans la console
-document.getElementById("first").addEventListener("input", function () {
-  console.log("Prénom: " + this.value);
-});
-document.getElementById("last").addEventListener("input", function () {
-  console.log("Nom: " + this.value);
-});
-document.getElementById("email").addEventListener("input", function () {
-  console.log("Adresse mail: " + this.value);
-});
-document.getElementById("message").addEventListener("input", function () {
-  console.log("Message: " + this.value);
+validationBtn.addEventListener("click", function () {
+  console.log("Prénom: " + prenom.value);
+  console.log("Nom: " + nom.value);
+  console.log("Adresse mail: " + mail.value);
+  console.log("Message: " + message.value);
 });

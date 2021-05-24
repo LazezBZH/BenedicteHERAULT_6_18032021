@@ -24,7 +24,7 @@ class List {
   displayTags() {
     let html = "";
     this.getAllTags().forEach((tag) => {
-      html += `<span class="tag tag-filter" id="${tag}">#${tag}</span>`;
+      html += `<span tabindex="0" class="tag tag-filter" id="${tag}">#${tag}</span>`;
     });
     document.getElementById("tags").innerHTML = html;
   }
@@ -62,7 +62,6 @@ class List {
       this.activeTags.push(tag);
       document.getElementById(tag).classList.add("tag-actif");
     }
-    console.log(this.activeTags);
 
     this.filtered = this.all.filter((photographe) => {
       let selected = false;
@@ -71,7 +70,7 @@ class List {
           selected = true;
         }
       });
-      console.log(selected);
+
       return selected;
     });
 

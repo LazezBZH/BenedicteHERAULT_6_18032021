@@ -113,12 +113,12 @@ main a {
 }
 .tagline {
   color: black;
-  font-size: 10px;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 .prix {
   color: #757575;
-  font-size: 9px;
+  font-size: 0.7rem;
   font-weight: 400;
 }
 main img {
@@ -327,7 +327,7 @@ input {
 #message {
   min-height: 10rem;
 }
-.close {
+#close {
   position: absolute;
   right: 15px;
   top: 15px;
@@ -335,37 +335,25 @@ input {
   height: 32px;
   opacity: 1;
   cursor: pointer;
-  transform: scale(0.7);
 }
-.close:before,
-.close:after {
-  position: absolute;
-  left: 15px;
-  content: " ";
-  height: 33px;
-  width: 3px;
-  background-color: white;
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
-}
+
 .btn-submit {
   background: #901c1c;
   display: block;
   margin: 2rem 0;
   border-radius: 7px;
-  font-size: 1rem;
   padding: 1rem 2rem;
   color: #fff;
   cursor: pointer;
   border: 0;
   font-size: 1.4rem;
   font-weight: 600;
+  width: 6.5rem;
 }
-
+.btn-submit_off {
+  background: rgba(218, 216, 216, 0.705);
+  cursor: not-allowed;
+}
 /*FICHES PAR PHOTOGRAPHE* bouton tri*/
 .sort {
   margin-left: 4rem;
@@ -467,18 +455,37 @@ input {
   background-color: white;
   max-height: 98%;
 }
-.arrow {
-  color: rgb(144, 28, 28);
-  font-size: 8rem;
+
+.arrow img,
+#close-slider img {
+  width: 4rem;
 }
+
 #next {
-  margin-left: -50px;
+  margin-left: -3.5rem;
+  margin-bottom: 4rem;
+}
+#previous {
+  margin-bottom: 4rem;
 }
 #close-slider {
-  font-size: 4rem;
-  color: rgb(144, 28, 28);
-  font-weight: 100;
+  margin-left: -0.5rem;
+  margin-top: 2rem;
 }
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal;
+}
+
 .close-slider {
   display: flex;
   flex-direction: row;
@@ -486,7 +493,7 @@ input {
 .slider-content {
   padding: 0 30px;
   border-radius: 8px;
-  padding: auto;
+
   color: #901c1c;
   font-size: 2rem;
   font-weight: 600;
@@ -499,11 +506,10 @@ input {
 .slider-content img {
   max-width: 80vw;
   height: 85vh;
-  padding: auto;
+
   object-fit: cover;
 }
 .slider-content video {
-  padding: auto;
   width: auto;
   height: 30rem;
 }
@@ -553,7 +559,7 @@ input {
   .photoIdentite {
     width: 12rem;
     margin: auto;
-    padding: auto;
+
     text-align: center;
   }
   h2 {

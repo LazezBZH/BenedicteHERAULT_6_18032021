@@ -22,7 +22,6 @@ fetch("js/donnees.json")
       let media = factory.build(item);
       list.add(media);
     });
-    console.log(list.all);
 
     list.display(list.all);
     list.listenForReordering();

@@ -164,7 +164,7 @@ class MediaList {
     for (var i = 0; i < likesMediaPhotographerArray.length; i++) {
       sum += parseInt(likesMediaPhotographerArray[i].innerHTML, 10);
     }
-    console.log("total des likes photographe= " + sum);
+
     document.querySelector("#scrollLikes").textContent = sum;
 
     document.getElementsByClassName("heart");
