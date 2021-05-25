@@ -10,6 +10,7 @@ class Video {
     this.price = data.price;
     this.src = data.src;
     this.title = data.title;
+    this.alt = data.alt;
   }
   render() {
     return `
@@ -20,7 +21,7 @@ class Video {
         </video>
       
       <figcaption>
-        <div class="mediaTitle">${this.title}</div>
+        <h2 class="mediaTitle">${this.title}</h2>
         <div> <span class="mediaLikes" data-id="${this.id}">${this.likes}</span>
         <span> <i class="heart fas fa-heart" data-id="${this.id}" ></span></i>
         </div>
@@ -31,11 +32,11 @@ class Video {
   renderSlide() {
     return `
     <figure>
-      <video controls autoplay>
+      <video controls autoplay title= " ${this.alt}">
         <source src="medias/${this.photographerId}/${this.src}" type="video/mp4">
       </video>
       <figcaption>
-      ${this.title}
+      <h2>${this.title}</h2>
       </figcaption>
     </figure>`;
   }

@@ -234,6 +234,12 @@ figcaption i {
   color: #db8876;
 }
 
+.mediaTitle {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
 #medias img {
   width: 20rem;
   height: 20rem;
@@ -455,7 +461,11 @@ input {
   background-color: white;
   max-height: 98%;
 }
-
+.slider h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
 .arrow img,
 #close-slider img {
   width: 4rem;
@@ -646,14 +656,17 @@ input {
   }
 
   /*slider*/
+
   #slider {
     width: 100%;
   }
   #slider-all {
     width: 100%;
   }
-  .arrow {
-    font-size: 4rem;
+
+  .arrow img,
+  #close-slider img {
+    width: 2rem;
   }
   .close-slider {
     width: 90%;
@@ -677,9 +690,10 @@ input {
     padding-top: 1rem;
   }
   #next {
-    margin-left: -30px;
+    margin-left: -40px;
   }
   #close-slider {
-    margin-top: -2rem;
+    margin-top: -0.2rem;
+    margin-left: 0.1rem;
   }
 }

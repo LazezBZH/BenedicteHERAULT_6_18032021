@@ -10,13 +10,14 @@ class Image {
     this.price = data.price;
     this.src = data.src;
     this.title = data.title;
+    this.alt = data.alt;
   }
   render() {
     return `
     <figure tabindex="3">
      <img src="medias/${this.photographerId}b/${this.src}" alt="lancer le diaporama à partir de la photo de titre ${this.title}" class="diapo" id="${this.id}"/>
      <figcaption>
-      <div class="mediaTitle">${this.title}</div>
+      <h2 class="mediaTitle">${this.title}</h2>
       <div> <span class="mediaLikes" data-id="${this.id}" >${this.likes}</span>
       <span> <i class="heart fas fa-heart" data-id="${this.id}" ></i></span>
       </div>
@@ -27,9 +28,9 @@ class Image {
   renderSlide() {
     return `
     <figure >
-     <img src="medias/${this.photographerId}/${this.src}" alt="${this.title}" class="diapo" id="${this.id}" />
+     <img src="medias/${this.photographerId}/${this.src}" alt="${this.alt}" class="diapo" id="${this.id}" />
      <figcaption>
-      <div class="mediaTitle">${this.title}</div>
+      <h2 class="mediaTitle">${this.title}</h2>
      </figcaption>
     </figure>`;
   }
