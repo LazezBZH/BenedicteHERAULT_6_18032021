@@ -17,7 +17,8 @@ class Image {
      <img src="medias/${this.photographerId}b/${this.src}" alt="lancer le diaporama à partir de la photo de titre ${this.title}" class="diapo" id="${this.id}"/>
      <figcaption>
       <div class="mediaTitle">${this.title}</div>
-      <div> <span class="mediaLikes" id="${this.id}likes" >${this.likes}</span><span> <i class="heart fas fa-heart" id="${this.id}heart" ></i></span>
+      <div> <span class="mediaLikes" data-id="${this.id}" >${this.likes}</span>
+      <span> <i class="heart fas fa-heart" data-id="${this.id}" ></i></span>
       </div>
      </figcaption>
     </figure>`;

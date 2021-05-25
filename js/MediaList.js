@@ -6,10 +6,22 @@ class MediaList {
     this.activeTags = [];
     this.order = "";
     this.isAscending = true;
+    this.totalLikes = 0;
   }
   add(media) {
     this.all.push(media);
   }
+
+  build(medias) {
+    this.display(this.all);
+    this.listenForReordering();
+    let slider = new Slider(this.all);
+    slider.listenForStart();
+    this.getAllLikesPhotographer();
+    this.increaseMediaLikes();
+    this.displayReorderList();
+  }
+
   display(medias) {
     let html = "";
 
@@ -40,7 +52,6 @@ class MediaList {
       this.activeTags.push(tag);
       document.getElementById(tag).classList.add("tag-actif");
     }
-    console.log(this.activeTags);
 
     this.filtered = this.all.filter((media) => {
       let selected = false;
@@ -49,15 +60,14 @@ class MediaList {
           selected = true;
         }
       });
-      console.log(selected);
       return selected;
     });
 
     this.hideAll();
     if (this.activeTags.length === 0) {
-      this.display(this.all);
+      this.build(this.all);
     } else {
-      this.display(this.filtered);
+      this.build(this.filtered);
     }
   }
 
@@ -95,10 +105,8 @@ class MediaList {
 
         el.style.order == "0";
 
-        console.log(this.order, this.isAscending);
         this.reorder(order);
         reorderAreaFirst.textContent = e.target.textContent;
-        //?????????? A REVOIR
       });
     }
   }
@@ -106,7 +114,7 @@ class MediaList {
   reorder(order) {
     let methodName = "reorderBy" + ucfirst(order);
     this[methodName]();
-    this.display(this.all);
+    this.build(this.all);
   }
   reorderByPopularity() {
     this.all = this.all.sort((a, b) => {
@@ -143,30 +151,25 @@ class MediaList {
     for (let i = 0; i < hearts.length; i++) {
       let heart = hearts[i];
       let selected = heart.parentNode;
-      let likes = selected.parentNode.children[0];
-      let likesMedia = parseInt(likes.innerHTML);
-      let allLikes = document.getElementById("scrollLikes");
-      let allLikesNum = parseInt(allLikes.innerHTML);
 
       heart.addEventListener("click", (e) => {
-        likesMedia = likesMedia + 1;
-        likes.innerHTML = likesMedia;
+        let id = e.target.getAttribute("data-id");
+        let index = this.all.findIndex((media) => media.id == id);
+        let likes = this.all[index].likes + 1;
+        this.all[index].likes = likes;
+        selected.parentNode.children[0].innerHTML = likes;
         heart.setAttribute("style", "color:#901c1c");
-        allLikesNum = allLikesNum + 1;
-        allLikes.innerHTML = allLikesNum;
+        this.totalLikes++;
+        document.getElementById("scrollLikes").innerHTML = this.totalLikes;
       });
     }
   }
-  getAllPhotographerLikes() {
-    let likesMediaPhotographer = document.querySelectorAll(".mediaLikes");
-    let likesMediaPhotographerArray = Array.from(likesMediaPhotographer);
-    let sum = 0;
-    for (var i = 0; i < likesMediaPhotographerArray.length; i++) {
-      sum += parseInt(likesMediaPhotographerArray[i].innerHTML, 10);
-    }
-
-    document.querySelector("#scrollLikes").textContent = sum;
-
-    document.getElementsByClassName("heart");
+  getAllLikesPhotographer() {
+    let total = 0;
+    this.all.forEach((media) => {
+      total += media.likes;
+    });
+    this.totalLikes = total;
+    document.querySelector("#scrollLikes").textContent = total;
   }
 }

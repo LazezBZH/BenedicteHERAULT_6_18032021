@@ -61,7 +61,7 @@ class Slider {
   }
 
   next() {
-    if (this.currentIndex >= this.medias.length) {
+    if (this.currentIndex >= this.medias.length - 1) {
       this.currentIndex = 0;
     } else {
       this.currentIndex++;
@@ -70,17 +70,9 @@ class Slider {
 
   previous() {
     if (this.currentIndex <= 0) {
-      this.currentIndex = this.medias.length;
+      this.currentIndex = this.medias.length - 1;
     } else {
       this.currentIndex--;
     }
   }
-}
-
-//fermeture lightbox
-let closeDiapo = document.getElementById("close-slider");
-closeDiapo.addEventListener("click", closeSlider);
-
-function closeSlider() {
-  slider.style.display = "none";
 }

@@ -21,7 +21,8 @@ class Video {
       
       <figcaption>
         <div class="mediaTitle">${this.title}</div>
-        <div> <span class="mediaLikes" id="${this.id}likes">${this.likes}</span><span> <i class="heart fas fa-heart" id="${this.id}heart" ></span></i>
+        <div> <span class="mediaLikes" data-id="${this.id}">${this.likes}</span>
+        <span> <i class="heart fas fa-heart" data-id="${this.id}" ></span></i>
         </div>
       </figcaption>
     </figure>`;

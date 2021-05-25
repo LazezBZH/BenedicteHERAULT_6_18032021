@@ -23,16 +23,17 @@ fetch("js/donnees.json")
       list.add(media);
     });
 
-    list.display(list.all);
-    list.listenForReordering();
-    let slider = new Slider(list.all);
-    slider.listenForStart();
-    list.getAllPhotographerLikes();
-    list.increaseMediaLikes();
-    list.displayReorderList();
-    //list.increaseAllPhotographerLikes();
+    list.build(list.all);
   });
 
 function getMedias(medias) {
   return medias.filter((media) => media.photographerId == query("id"));
+}
+
+//fermeture lightbox
+let closeDiapo = document.getElementById("close-slider");
+closeDiapo.addEventListener("click", closeSlider);
+
+function closeSlider() {
+  slider.style.display = "none";
 }
