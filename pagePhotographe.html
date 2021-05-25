@@ -74,71 +74,73 @@
       <!--FORMULAIRE DE CONTACT-->
       <div class="fiche">
         <div class="bground">
-          <div class="form-header">
-            <h2 id="form-title"></h2>
-            <img
-              id="close"
-              src="medias/crossclose.png"
-              alt="Fermer le formulaire de contact sans envoyer de message"
-            />
-          </div>
+          <div class="form">
+            <div class="form-header">
+              <h2 id="form-title"></h2>
+              <img
+                id="close"
+                src="medias/crossclose.png"
+                alt="Fermer le formulaire de contact sans envoyer de message"
+              />
+            </div>
 
-          <div class="modal-body">
-            <form id="form" name="contact" action="index.html" method="get">
-              <div class="form-data">
-                <label for="first">Prénom</label><br />
-                <input
-                  class="text-control"
-                  type="text"
-                  id="first"
-                  name="first"
-                  required="required"
-                  minlength="2"
-                /><br />
-                <span class="erreur" id="erreur-prenom"></span>
-              </div>
-
-              <div class="form-data">
-                <label for="last">Nom</label><br />
-                <input
-                  class="text-control"
-                  type="text"
-                  id="last"
-                  name="last"
-                  required="required"
-                  minlength="2"
-                /><br />
-                <span class="erreur" id="erreur-nom"></span>
-              </div>
-              <div class="form-data">
-                <label for="email">E-mail</label><br />
-                <input
-                  class="text-control"
-                  type="email"
-                  id="email"
-                  name="email"
-                  required="required"
-                /><br />
-                <span class="erreur" id="erreur-mail"></span>
-              </div>
-
-              <div class="form-data">
-                <label for="message">Votre message</label><br />
-                <textarea
-                  class="text-control"
-                  id="message"
-                  name="message"
-                  required="required"
-                  minlength="5"
-                ></textarea
-                ><br />
-                <span class="erreur" id="erreur-message"></span>
-
-                <div class="button btn-submit btn-submit_off" id="btn-envoi">
-                  Envoyer
+            <div class="modal-body">
+              <form id="form" name="contact" action="index.html" method="get">
+                <div class="form-data">
+                  <label for="first">Prénom</label><br />
+                  <input
+                    class="text-control"
+                    type="text"
+                    id="first"
+                    name="first"
+                    required="required"
+                    minlength="2"
+                  /><br />
+                  <span class="erreur" id="erreur-prenom"></span>
                 </div>
-              </div>
-            </form>
+
+                <div class="form-data">
+                  <label for="last">Nom</label><br />
+                  <input
+                    class="text-control"
+                    type="text"
+                    id="last"
+                    name="last"
+                    required="required"
+                    minlength="2"
+                  /><br />
+                  <span class="erreur" id="erreur-nom"></span>
+                </div>
+                <div class="form-data">
+                  <label for="email">E-mail</label><br />
+                  <input
+                    class="text-control"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required="required"
+                  /><br />
+                  <span class="erreur" id="erreur-mail"></span>
+                </div>
+
+                <div class="form-data">
+                  <label for="message">Votre message</label><br />
+                  <textarea
+                    class="text-control"
+                    id="message"
+                    name="message"
+                    required="required"
+                    minlength="5"
+                  ></textarea
+                  ><br />
+                  <span class="erreur" id="erreur-message"></span>
+
+                  <div class="button btn-submit btn-submit_off" id="btn-envoi">
+                    Envoyer
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
 
