@@ -128,20 +128,16 @@ main img {
   border-radius: 14rem;
 }
 
-.tag-photographe {
-  padding: 0.1rem;
-  margin: 0 0.2rem;
-  color: #901c1c;
-  font-size: 12px;
-  border: 0.5px solid #c4c4c4;
-  border-radius: 11px;
-}
 .tags {
   display: flex;
   justify-content: center;
 }
-.tag-actif {
+.tag:hover {
   background-color: #db8876;
+  color: white;
+}
+.tag-actif {
+  background-color: #901c1c;
   color: white;
 }
 
@@ -151,7 +147,7 @@ main img {
   display: none;
   background-color: #db8876;
   padding: 0.1rem 0.5rem;
-  border-radius: 0.2rem;
+  border-radius: 5px;
   top: 2%;
   left: 45%;
   text-decoration: none;
@@ -172,6 +168,7 @@ main img {
   margin: 4rem 5rem 3rem 5rem;
   background-color: rgba(243, 244, 246, 0.5);
   padding: 2rem;
+  border-radius: 5px;
 }
 .contactButton {
   height: 1rem;
@@ -184,9 +181,12 @@ main img {
   font-weight: 600;
   color: white;
   background-color: #901c1c;
-  border-radius: 0.2rem;
+  border-radius: 5px;
 }
-
+.contactButton:hover {
+  background-color: #db8876;
+  color: white;
+}
 .textProfil {
   display: flex;
   flex-direction: column;
@@ -207,6 +207,19 @@ main img {
   margin-left: 5rem;
 }
 
+.tag-photographe {
+  padding: 0.1rem;
+  margin: 0 0.2rem;
+  color: #901c1c;
+  font-size: 12px;
+  border: 0.5px solid #c4c4c4;
+  border-radius: 11px;
+}
+.tag-photographe:hover {
+  background-color: #db8876;
+  color: white;
+}
+
 /*FICHES PAR PHOTOGRAPHE* medias*/
 
 #medias figure {
@@ -215,7 +228,7 @@ main img {
   margin: 2rem;
   padding: 0;
   background-color: black;
-  border-radius: 1.5%;
+  border-radius: 5px;
 }
 
 #medias figcaption {
@@ -244,7 +257,7 @@ figcaption i {
   width: 20rem;
   height: 20rem;
   object-fit: cover;
-  border-radius: 1.5%;
+  border-radius: 5px;
 }
 
 video {
@@ -269,7 +282,7 @@ video {
   bottom: 1%;
   right: 2%;
   background-color: #db8876;
-  border-radius: 0.2rem;
+  border-radius: 5px;
 }
 #scrollPrice {
   margin-left: 2rem;
@@ -297,10 +310,10 @@ video {
   top: 5%;
   width: 50%;
   max-width: 1000px;
-
   background-color: #db8876;
   padding: 2rem;
   margin-left: 22%;
+  border-radius: 5px;
 }
 
 #form-title {
@@ -311,7 +324,6 @@ video {
 
 label {
   font-size: 2rem;
-
   display: inline-block;
   margin-bottom: 11px;
 }
@@ -320,7 +332,7 @@ label {
   margin: 0;
   padding: 8px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 2rem;
   height: 48px;
 }
@@ -331,6 +343,7 @@ label {
 }
 input {
   border: none;
+  border-radius: 5px;
 }
 .erreur-input {
   margin: 0;
@@ -392,7 +405,7 @@ input {
   background-color: #901c1c;
 
   margin-left: 1rem;
-  border-radius: 0.4rem;
+  border-radius: 5px;
   position: relative;
   display: none;
 }
@@ -408,7 +421,7 @@ input {
   background-color: #901c1c;
 
   margin-left: 1rem;
-  border-radius: 0.4rem;
+  border-radius: 5px;
   position: absolute;
   left: 4.5rem;
 }
@@ -442,7 +455,7 @@ input {
   -o-transition: 0.8s all 0.3s;
   transition: 0.8s all 0.3s;
   border: 1rem solid #901c1c;
-  border-radius: 0.3rem;
+  border-radius: 5px;
 }
 #sort-list ul:hover {
   max-height: 150rem;
