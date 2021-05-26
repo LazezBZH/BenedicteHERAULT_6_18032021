@@ -28,7 +28,7 @@ class Image {
   renderSlide() {
     return `
     <figure >
-     <img src="medias/${this.photographerId}/${this.src}" alt="${this.alt}" class="diapo" id="${this.id}" />
+     <img src="medias/${this.photographerId}b/${this.src}" alt="${this.alt}" class="diapo" id="${this.id}" />
      <figcaption>
       <h2 class="mediaTitle">${this.title}</h2>
      </figcaption>
