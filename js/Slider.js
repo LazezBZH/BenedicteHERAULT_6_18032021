@@ -22,6 +22,20 @@ class Slider {
     });
     this.listenForMoves();
   }
+  listenForStartKeyboard() {
+    this.slides.forEach((slide) => {
+      slide.addEventListener("keyup", (e) => {
+        if (e.keyCode == 13) {
+          this.slider.style.display = "flex";
+          let id = e.target.getAttribute("id");
+          this.currentIndex = this.medias.findIndex((media) => media.id == id);
+
+          this.display();
+        }
+      });
+    });
+    this.listenForMoves();
+  }
 
   //navigation entre les médias, click sur flèche + nav au clavier
   listenForMoves() {

@@ -17,6 +17,7 @@ button,
 .scroll {
   cursor: pointer;
 }
+
 .heart {
   cursor: url("https://surlapage.fr/widget/cursors/11/1289417.gif"), default;
 }
@@ -67,7 +68,7 @@ nav {
 
   width: auto;
 }
-nav span {
+nav a {
   height: 1rem;
   padding: 0 0.2rem;
   margin: 0 0.3rem;
@@ -75,6 +76,7 @@ nav span {
   font-size: 12px;
   border: 0.5px solid #c4c4c4;
   border-radius: 11px;
+  text-decoration: none;
 }
 .accueil {
   margin: 0;
@@ -132,8 +134,14 @@ main img {
   display: flex;
   justify-content: center;
 }
+
 .tag:hover {
-  background-color: #db8876;
+  color: white;
+  background-color: #901c1c;
+  transition: 1s;
+}
+.tag:focus {
+  background-color: #d3573c;
   color: white;
 }
 .tag-actif {
@@ -183,24 +191,27 @@ main img {
   background-color: #901c1c;
   border-radius: 5px;
 }
-.contactButton:hover {
+.contactButton:hover,
+.contactButton:focus {
   background-color: #db8876;
-  color: white;
+  color: black;
 }
 .textProfil {
   display: flex;
   flex-direction: column;
 }
-#nameProfil {
+#nameProfil h1 {
   font-size: 3rem;
   color: #d3573c;
   margin: 1rem 0;
 }
-#locationProfil {
+#locationProfil h2 {
   color: #901c1c;
   font-size: 1.5rem;
+  font-weight: 200;
   margin-bottom: 0;
   margin-top: 0;
+  padding: 0;
 }
 
 #headerFiche {
@@ -215,7 +226,8 @@ main img {
   border: 0.5px solid #c4c4c4;
   border-radius: 11px;
 }
-.tag-photographe:hover {
+.tag-photographe:hover,
+.tag-photographe:focus {
   background-color: #db8876;
   color: white;
 }
@@ -223,8 +235,8 @@ main img {
 /*FICHES PAR PHOTOGRAPHE* medias*/
 
 #medias figure {
-  width: 20rem;
-  height: 20rem;
+  width: 21rem;
+  height: 21rem;
   margin: 2rem;
   padding: 0;
   background-color: black;
@@ -254,15 +266,20 @@ figcaption i {
 }
 
 #medias img {
-  width: 20rem;
-  height: 20rem;
+  width: 21rem;
+  height: 21rem;
   object-fit: cover;
   border-radius: 5px;
 }
-
+#medias img:hover,
+#medias img:focus,
+#medias video:hover,
+#medias video:focus {
+  border: solid 5px #901c1c;
+}
 video {
-  width: 20rem;
-  height: 20rem;
+  width: 21rem;
+  height: 21rem;
   padding: 0;
 }
 #medias {
@@ -270,6 +287,7 @@ video {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 2rem;
 }
 
 /*scroll page photographe*/
@@ -315,13 +333,22 @@ video {
   margin-left: 22%;
   border-radius: 5px;
 }
-
-#form-title {
-  font-size: 2rem;
-  margin-left: 0rem;
-  text-align: left;
+.form a {
+  text-decoration: none;
 }
 
+#form-title,
+#form-title-name {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-left: 0rem;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+#form-title-name {
+  margin-bottom: 1.5rem;
+}
 label {
   font-size: 2rem;
   display: inline-block;
@@ -361,12 +388,21 @@ input {
   position: absolute;
   right: 15px;
   top: 15px;
-  width: 32px;
-  height: 32px;
-  opacity: 1;
+  width: 40px;
+  height: 40px;
+  padding: 0%;
+  margin: 0%;
   cursor: pointer;
+  background-color: #db8876;
+  border: none;
 }
-
+#close:hover,
+#close:focus {
+  background-color: #901c1c;
+}
+#close img {
+  width: 40px;
+}
 .btn-submit {
   background: #901c1c;
   display: block;
@@ -380,92 +416,104 @@ input {
   font-weight: 600;
   width: 6.5rem;
 }
+
+#btn-envoi:hover,
+#btn-envoi:focus {
+  background: #db8876;
+  color: black;
+  border: solid 1.5px #901c1c;
+}
 .btn-submit_off {
   background: rgba(218, 216, 216, 0.705);
   cursor: not-allowed;
 }
 /*FICHES PAR PHOTOGRAPHE* bouton tri*/
 .sort {
-  margin-left: 4rem;
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 17%;
+  margin-left: 3.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
-#sort-txt {
-  padding-top: 1.5rem;
-  font-weight: 600;
+#selected-filter {
+  list-style: none;
 }
-.sort-list i {
-  margin: 0 0 0 1.5rem;
+#sort-list {
+  padding: 1rem 0;
+  text-align: left;
 }
-.sort-list {
-  color: white;
-  font-weight: 600;
-  background-color: #901c1c;
+#sort-list li {
+  margin-left: -2.5rem;
+  padding: 0.5rem 0;
+}
+.popularity-btn {
+  width: 11rem;
 
-  margin-left: 1rem;
+  color: white;
+  font-weight: 900;
+  font-size: 1.3rem;
+  background-color: #901c1c;
+  border-style: none;
   border-radius: 5px;
-  position: relative;
+  min-height: 2rem;
+  position: absolute;
+  left: 12rem;
+  top: 22.5rem;
+  padding: 1rem 0 1rem 1rem;
+}
+
+.popularity-btn-opened {
+  z-index: 9;
+  text-align: left;
   display: none;
 }
+.popularity-btn-opened ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-#sort-list_closed {
+.sort-by-date,
+.sort-by-title {
+  border-top: solid 1px white;
+}
+
+#text-choice {
   display: flex;
-
   justify-content: space-between;
-  width: 11.5rem;
-  height: 4.3rem;
-  color: white;
-  font-weight: 600;
-  background-color: #901c1c;
-
-  margin-left: 1rem;
-  border-radius: 5px;
-  position: absolute;
-  left: 4.5rem;
 }
-#sort-list_closed i {
-  margin-top: 0.5rem;
-  margin-right: 1rem;
-}
-#sort-list_closed div {
-  padding: 1rem;
-}
-#sort-list_first {
-  margin-left: 1rem;
-  margin-top: 0.5rem;
-}
-.sort-list li {
-  padding: 0.8rem 1.2rem 1rem 1rem;
-}
-
 #popularity-btn {
   display: flex;
-  flex-direction: row;
 }
-
-#sort-list ul {
-  list-style-type: none;
+.fa-chevron-down {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+}
+.fa-chevron-up {
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  color: white;
+}
+.sort-list_closed nav {
   padding: 0;
-  margin: 0;
-  overflow: hidden;
-  max-height: 2.3rem;
-  -webkit-transition: 0.8s all 0.3s;
-  -o-transition: 0.8s all 0.3s;
-  transition: 0.8s all 0.3s;
-  border: 1rem solid #901c1c;
-  border-radius: 5px;
 }
-#sort-list ul:hover {
-  max-height: 150rem;
+.sort-list_closed:hover,
+.sort-list_closed:focus {
+  background-color: #db8876;
+  color: black;
 }
-
-.sort-by_date,
-.sort-by_title {
-  border-top: solid 1px #d3573c;
+.sort-by button {
+  background-color: #901c1c;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
 }
-
+.sort-by button:hover,
+.sort-by button:focus {
+  background-color: #db8876;
+  color: black;
+}
 /*FICHES PAR PHOTOGRAPHE* slider*/
 #slider {
   background-color: rgba(255, 255, 255, 0.9);
@@ -505,6 +553,7 @@ input {
 #close-slider {
   margin-left: -0.5rem;
   margin-top: 2rem;
+  height: 4rem;
 }
 .screen-reader-text {
   border: 0;
@@ -614,7 +663,7 @@ input {
 
   .profil {
     margin: 2rem 0 1rem 0;
-    padding: 0.2rem;
+    padding: 1rem;
   }
   .contactButton {
     font-size: 1.2rem;
@@ -631,17 +680,26 @@ input {
     height: 8rem;
   }
 
-  #nameProfil {
+  #nameProfil h1 {
     text-align: left;
-    font-size: 2rem;
-
-    margin: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
   }
-
+  #locationProfil h2 {
+    margin: 0;
+    text-align: left;
+  }
   .scrollProfile {
     display: none;
   }
-
+  #taglineProfil {
+    font-size: 0.9rem;
+  }
+  #tags a {
+    margin: 0.3rem 0.2rem;
+  }
   /*formulaire*/
 
   .form {

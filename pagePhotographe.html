@@ -24,20 +24,18 @@
   <body>
     <div class="container">
       <!--HEADER-->
-      <header id="headerFiche" role="banner">
-        <h1>
-          <a
-            tabindex="0"
-            href="index.html"
-            id="logo"
-            aria-label="lien vers page d'accueil de FishEye "
-          >
-            <img
-              src="medias/logo.png"
-              alt="Logo de FishEye, lien vers page d'accueil de FishEye"
-            />
-          </a>
-        </h1>
+      <header id="headerFiche">
+        <a
+          tabindex="0"
+          href="index.html"
+          id="logo"
+          aria-label="lien vers page d'accueil de FishEye "
+        >
+          <img
+            src="medias/logo.png"
+            alt="Logo de FishEye, lien vers page d'accueil de FishEye"
+          />
+        </a>
       </header>
 
       <!--SLIDER-->
@@ -76,12 +74,14 @@
         <div class="bground">
           <div class="form">
             <div class="form-header">
-              <h2 id="form-title"></h2>
-              <img
-                id="close"
-                src="medias/crossclose.png"
-                alt="Fermer le formulaire de contact sans envoyer de message"
-              />
+              <h2 id="form-title">Contactez-moi</h2>
+              <p id="form-title-name"></p>
+              <button id="close">
+                <img
+                  src="medias/crossclose.png"
+                  alt="Fermer le formulaire de contact sans envoyer de message"
+                />
+              </button>
             </div>
 
             <div class="modal-body">
@@ -135,9 +135,14 @@
                   ><br />
                   <span class="erreur" id="erreur-message"></span>
 
-                  <div class="button btn-submit btn-submit_off" id="btn-envoi">
+                  <a
+                    href="#"
+                    class="button btn-submit btn-submit_off"
+                    id="btn-envoi"
+                    tabindex="0"
+                  >
                     Envoyer
-                  </div>
+                  </a>
                 </div>
               </form>
             </div>
@@ -149,8 +154,8 @@
           <div id="mainFiche">
             <section class="profil">
               <div class="textProfil">
-                <h2 id="nameProfil"></h2>
-                <p id="locationProfil"></p>
+                <h1 id="nameProfil"></h1>
+                <span id="locationProfil"></span>
                 <p id="taglineProfil"></p>
                 <div id="tagProfil"></div>
               </div>
@@ -163,45 +168,60 @@
 
           <!--Trier-->
 
-          <section id="medias"></section>
-
-          <section class="sort">
-            <div id="sort-txt">Triez-par</div>
-
-            <div id="sort-list_closed">
-              <div id="sort-list_first" tabindex="2">Popularité</div>
-              <div><i class="fas fa-chevron-up"></i></div>
-            </div>
-            <div id="sort-list" class="sort-list">
-              <ul tabindex="1">
-                <li
-                  tabindex="2"
-                  id="popularity-btn"
-                  class="sort-by sort-by_popu"
-                  data-order="popularity"
-                >
-                  Popularité
-                  <div><i class="fas fa-chevron-up"></i></div>
+          <div class="sort">
+            <span id="sort-text">Triez-par</span>
+            <button
+              tabindex="0"
+              id="sort-list_closed"
+              class="popularity-btn sort-list_closed"
+            >
+              <span id="selected-filter" class="category category-closed">
+                <span id="text-choice">
+                  <span id="text-choice-change">Popularité</span>
+                  <span><i class="fas fa-chevron-down"></i></span>
+                </span>
+              </span>
+            </button>
+            <nav
+              id="sort-list"
+              class="sort-by popularity-btn popularity-btn-opened"
+            >
+              <ul>
+                <li>
+                  <button
+                    tabindex="0"
+                    id="popularity-btn"
+                    class="sort-by_popu"
+                    data-order="popularity"
+                  >
+                    Popularité
+                    <span><i class="fas fa-chevron-up"></i></span>
+                  </button>
                 </li>
-                <li
-                  tabindex="2"
-                  id="date-btn"
-                  class="sort-by sort-by_date"
-                  data-order="date"
-                >
-                  Date
+                <li>
+                  <button
+                    id="date-btn"
+                    class="sort-by sort-by_date"
+                    data-order="date"
+                  >
+                    Date
+                  </button>
                 </li>
-                <li
-                  tabindex="2"
-                  id="title-btn"
-                  class="sort-by sort-by_title"
-                  data-order="title"
-                >
-                  Titre
+
+                <li>
+                  <button
+                    id="title-btn"
+                    class="sort-by sort-by_title"
+                    data-order="title"
+                  >
+                    Titre
+                  </button>
                 </li>
               </ul>
-            </div>
-          </section>
+            </nav>
+          </div>
+
+          <section id="medias"></section>
 
           <div class="scrollProfile">
             <div>
@@ -212,15 +232,15 @@
         </main>
       </div>
 
-      <script type="text/javascript" src="js/utils.js"></script>
-      <script type="text/javascript" src="js/modal.js"></script>
-      <script type="text/javascript" src="js/Image.js"></script>
-      <script type="text/javascript" src="js/Video.js"></script>
-      <script type="text/javascript" src="js/Photographer.js"></script>
-      <script type="text/javascript" src="js/MediaList.js"></script>
-      <script type="text/javascript" src="js/Slider.js"></script>
-      <script type="text/javascript" src="js/MediaFactory.js"></script>
-      <script type="text/javascript" src="js/pagePhotographe.js"></script>
+      <script src="js/utils.js"></script>
+      <script src="js/modal.js"></script>
+      <script src="js/Image.js"></script>
+      <script src="js/Video.js"></script>
+      <script src="js/Photographer.js"></script>
+      <script src="js/MediaList.js"></script>
+      <script src="js/Slider.js"></script>
+      <script src="js/MediaFactory.js"></script>
+      <script src="js/pagePhotographe.js"></script>
     </div>
   </body>
 </html>

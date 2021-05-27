@@ -14,16 +14,16 @@ class Video {
   }
   render() {
     return `
-    <figure tabindex="3">
+    <figure >
       
-        <video   class="diapo" id="${this.id}" title= "lancer le diaporama à partir de la video de titre ${this.title}">
+        <video  tabindex="0" class="diapo" id="${this.id}" title= "lancer le diaporama à partir de la video de titre ${this.title}">
         <source src="medias/${this.photographerId}/${this.src}" type="video/mp4"  >
         </video>
       
       <figcaption>
         <h2 class="mediaTitle">${this.title}</h2>
         <div> <span class="mediaLikes" data-id="${this.id}">${this.likes}</span>
-        <span> <i class="heart fas fa-heart" data-id="${this.id}" ></span></i>
+        <span> <i tabindex="0" class="heart fas fa-heart" data-id="${this.id}" ></span></i>
         </div>
       </figcaption>
     </figure>`;

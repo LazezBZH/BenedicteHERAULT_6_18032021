@@ -33,7 +33,13 @@ function getMedias(medias) {
 //fermeture lightbox
 let closeDiapo = document.getElementById("close-slider");
 closeDiapo.addEventListener("click", closeSlider);
+closeDiapo.addEventListener("keyup", closeSliderKeyboard);
 
 function closeSlider() {
   slider.style.display = "none";
+}
+function closeSliderKeyboard(e) {
+  if (e.keyCode == 13) {
+    slider.style.display = "none";
+  }
 }

@@ -24,7 +24,7 @@ class List {
   displayTags() {
     let html = "";
     this.getAllTags().forEach((tag) => {
-      html += `<span tabindex="0" class="tag tag-filter" id="${tag}">#${tag}</span>`;
+      html += `<a href="#" tabindex="0" class="tag tag-filter" id="${tag}">#${tag}</a>`;
     });
     document.getElementById("tags").innerHTML = html;
   }

@@ -5,7 +5,6 @@ class MediaList {
     this.all = [];
     this.activeTags = [];
     this.order = "";
-    this.isAscending = true;
     this.totalLikes = 0;
   }
   add(media) {
@@ -17,6 +16,7 @@ class MediaList {
     this.listenForReordering();
     let slider = new Slider(this.all);
     slider.listenForStart();
+    slider.listenForStartKeyboard();
     this.getAllLikesPhotographer();
     this.increaseMediaLikes();
     this.displayReorderList();
@@ -79,7 +79,7 @@ class MediaList {
   displayReorderList() {
     let reorderAreaClosed = document.getElementById("sort-list_closed");
     let reorderAreaOpen = document.getElementById("sort-list");
-    reorderAreaClosed.addEventListener("mouseover", function (evt) {
+    reorderAreaClosed.addEventListener("click", function (evt) {
       reorderAreaClosed.style.display = "none";
       reorderAreaOpen.style.display = "flex";
     });
@@ -91,18 +91,12 @@ class MediaList {
 
   listenForReordering() {
     let elements = document.getElementsByClassName("sort-by");
-    let reorderAreaFirst = document.getElementById("sort-list_first");
+    let reorderAreaFirst = document.getElementById("text-choice-change");
     for (let el of elements) {
       el.addEventListener("click", (e) => {
         let order = e.target.getAttribute("data-order");
-        if (this.order != order) {
-          this.isAscending = true;
-        } else {
-          this.isAscending = !this.isAscending;
-        }
 
         this.order = order;
-
         el.style.order == "0";
 
         this.reorder(order);
@@ -118,31 +112,20 @@ class MediaList {
   }
   reorderByPopularity() {
     this.all = this.all.sort((a, b) => {
-      if (this.isAscending) {
-        return a.likes - b.likes;
-      } else {
-        return b.likes - a.likes;
-      }
+      return b.likes - a.likes;
     });
   }
   reorderByDate() {
     this.all = this.all.sort((a, b) => {
       let dateA = new Date(a.date);
       let dateB = new Date(b.date);
-      if (this.isAscending) {
-        return dateA - dateB;
-      } else {
-        return dateB - dateA;
-      }
+
+      return dateB - dateA;
     });
   }
   reorderByTitle() {
     this.all = this.all.sort((a, b) => {
-      if (this.isAscending) {
-        return a.title > b.title ? 1 : -1;
-      } else {
-        return b.title > a.title ? 1 : -1;
-      }
+      return a.title > b.title ? 1 : -1;
     });
   }
 

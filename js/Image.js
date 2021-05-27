@@ -14,12 +14,12 @@ class Image {
   }
   render() {
     return `
-    <figure tabindex="3">
-     <img src="medias/${this.photographerId}b/${this.src}" alt="lancer le diaporama à partir de la photo de titre ${this.title}" class="diapo" id="${this.id}"/>
+    <figure>
+     <img tabindex="0" src="medias/${this.photographerId}b/${this.src}" alt="lancer le diaporama à partir de la photo de titre ${this.title}" class="diapo" id="${this.id}"/>
      <figcaption>
       <h2 class="mediaTitle">${this.title}</h2>
       <div> <span class="mediaLikes" data-id="${this.id}" >${this.likes}</span>
-      <span> <i class="heart fas fa-heart" data-id="${this.id}" ></i></span>
+      <span> <i tabindex="0" class="heart fas fa-heart" data-id="${this.id}" ></i></span>
       </div>
      </figcaption>
     </figure>`;
