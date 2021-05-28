@@ -597,6 +597,19 @@ input {
   height: 30rem;
 }
 
+#message-nav {
+  display: flex;
+  flex-direction: row;
+}
+#message-nav-txt {
+  position: absolute;
+  left: 35%;
+  top: 1%;
+  width: 28rem;
+  color: #901c1c;
+  font-size: 0.8rem;
+  display: none;
+}
 /**/
 /*RESPONSIVE*/
 @media screen and (max-width: 800px) {
@@ -776,5 +789,11 @@ input {
   #close-slider {
     margin-top: -0.2rem;
     margin-left: 0.1rem;
+  }
+
+  #message-nav-txt {
+    width: 0rem;
+    height: 0rem;
+    overflow: hidden;
   }
 }

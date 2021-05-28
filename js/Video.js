@@ -12,6 +12,8 @@ class Video {
     this.title = data.title;
     this.alt = data.alt;
   }
+
+  //render pour la page du photographe
   render() {
     return `
     <figure >
@@ -29,6 +31,7 @@ class Video {
     </figure>`;
   }
 
+  //render pour la lightbox
   renderSlide() {
     return `
     <figure>

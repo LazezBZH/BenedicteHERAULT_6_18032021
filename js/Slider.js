@@ -31,26 +31,26 @@ class Slider {
           this.currentIndex = this.medias.findIndex((media) => media.id == id);
 
           this.display();
+          document.getElementById("message-nav-txt").style.display = "block";
         }
       });
     });
-    this.listenForMoves();
   }
 
-  //navigation entre les médias, click sur flèche + nav au clavier
+  //navigation entre les médias flèches + nav au clavier
   listenForMoves() {
     let next = document.getElementById("next");
     let previous = document.getElementById("previous");
 
     document.addEventListener("keydown", (e) => {
-      if (e.keyCode == 37) {
+      if (e.keyCode == 39) {
         this.next();
         this.display();
       }
     });
 
     document.addEventListener("keydown", (e) => {
-      if (e.keyCode == 39) {
+      if (e.keyCode == 37) {
         this.previous();
         this.display();
       }

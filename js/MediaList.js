@@ -1,4 +1,4 @@
-//ensemble des média de la page d'un photographe
+//ensemble des médias de la page d'un photographe
 
 class MediaList {
   constructor() {
@@ -11,7 +11,7 @@ class MediaList {
     this.all.push(media);
   }
 
-  build(medias) {
+  build() {
     this.display(this.all);
     this.listenForReordering();
     let slider = new Slider(this.all);
@@ -129,6 +129,7 @@ class MediaList {
     });
   }
 
+  //incrémentation likes par médias et total par photographe (dans le scroll de la page)
   increaseMediaLikes() {
     let hearts = document.getElementsByClassName("heart");
     for (let i = 0; i < hearts.length; i++) {
@@ -144,6 +145,18 @@ class MediaList {
         heart.setAttribute("style", "color:#901c1c");
         this.totalLikes++;
         document.getElementById("scrollLikes").innerHTML = this.totalLikes;
+      });
+      heart.addEventListener("keyup", (e) => {
+        if (e.keyCode == 13) {
+          let id = e.target.getAttribute("data-id");
+          let index = this.all.findIndex((media) => media.id == id);
+          let likes = this.all[index].likes + 1;
+          this.all[index].likes = likes;
+          selected.parentNode.children[0].innerHTML = likes;
+          heart.setAttribute("style", "color:#901c1c");
+          this.totalLikes++;
+          document.getElementById("scrollLikes").innerHTML = this.totalLikes;
+        }
       });
     }
   }

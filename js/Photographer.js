@@ -18,6 +18,7 @@ class Photographer {
       tagHtml += `<span  class="tag-photographe">#${tag}</span>`;
     }
 
+    //affichage dans page d'accueil
     return `
        <a href="pagePhotographe.html?id=${this.id}" class="linkPhotographer">
         <div class="photoIdentite"><img src="medias/photographersIDPhotosb/${this.portrait}" alt="lien vers la page de ${this.name}"></div>
